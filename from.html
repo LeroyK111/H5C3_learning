@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+</head>
+
+<body>
+    <form action="http://192.168.1.100:8000/high/demo/" method="post" name="shiyan">
+        <div><input type="reset" value="重置"></div>
+        <!-- 文本 -->
+        <div>输入你的名字<input type="text" name="username" maxlength="100"></div>
+        <div>
+            <!-- label可以绑定id，让内容和输入框绑定 -->
+            <label for="red">红</label>
+            <!-- 多选框 -->
+            <input type="checkbox" name="red" id="red" value="1">
+            绿<input type="checkbox" name="green" id="" value="1">
+            蓝<input type="checkbox" name="blue" id="" value="1">
+        </div>
+        <div>
+            <!-- 单选,name必须相同 -->
+            男<input type="radio" name="gender" id="" value="1" checked="checked">
+            女<input type="radio" name="gender" id="" value="0">
+        </div>
+        <!-- 日期 -->
+        <div>输入你的出生日期<input type="date" name="birthdate" id=""></div>
+        <!-- 密码 -->
+        <div>密码<input type="password" name="password" id="" maxlength="15"></div>
+        <!-- 触发提交 -->
+        <div><input type="submit" value="提交"></div>
+        <!-- button一般是请求数据or验证码，触发的是js代码 -->
+        <div>手机验证码<input type="text" name="SMS" id=""><br><input type="button" value="发送验证码"></div>
+        <div>文件上传<input type="file" name="" id=""></div>
+        <!-- 下拉框 -->
+        <div>
+            籍贯:
+            <select name="select" id="">
+                <option value="1">选项一</option>
+                <option value="2" selected="selected">选项二</option>
+            </select>
+        </div>
+        <!-- 文本域,要用CSS修饰 -->
+        <div><textarea name="text" id="" cols="30" rows="10">个人简介</textarea></div>
+    </form>
+</body>
+
+</html>
