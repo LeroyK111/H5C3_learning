@@ -293,27 +293,77 @@ H5新增属性
 
 CSS语法规范
 
+![image-20220329192023228](readme.assets/image-20220329192023228.png)
 
+![image-20220329195232237](readme.assets/image-20220329195232237.png)
 
+代码风格: 展开，小写，加空格
 
+![image-20220329195606931](readme.assets/image-20220329195606931.png)
 
+![image-20220329195701467](readme.assets/image-20220329195701467.png)
 
+![image-20220329195755721](readme.assets/image-20220329195755721.png)
 
+CSS选择器：
 
+1.基础选择器
 
-CSS基础选择器：
+单个选择器组成。
 
+标签选择器
 
+![image-20220330125557091](readme.assets/image-20220330125557091.png)
+
+![image-20220330125755166](readme.assets/image-20220330125755166.png)
+
+类选择器（最常用）
+
+![image-20220330133335529](readme.assets/image-20220330133335529.png)
+
+![image-20220330135855791](readme.assets/image-20220330135855791.png)
+
+![image-20220330140816506](readme.assets/image-20220330140816506.png)
+
+![image-20220330141745587](readme.assets/image-20220330141745587.png)
+
+id选择器
+
+id属性只能被使用一次，对于每个html来说不能重复使用，应当作为唯一属性
+
+![image-20220330141827761](readme.assets/image-20220330141827761.png)
+
+![image-20220330143150064](readme.assets/image-20220330143150064.png)
+
+**经常作为javascript的首选锚点**
+
+通配符选择器(清除内外边距)
+
+![image-20220330143857473](readme.assets/image-20220330143857473.png)
 
 设置字体样式：
 
+![image-20220330144728668](readme.assets/image-20220330144728668.png)
 
+**建议使用常见字体**
+
+![image-20220330144908025](readme.assets/image-20220330144908025.png)
+
+![image-20220330145736316](readme.assets/image-20220330145736316.png)
+
+![image-20220330150836205](readme.assets/image-20220330150836205.png)
+
+![image-20220330151050350](readme.assets/image-20220330151050350.png)
 
 设置文本样式：
 
 
 
+
+
 CSS三种引入方式：
+
+
 
 
 

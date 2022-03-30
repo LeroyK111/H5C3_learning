@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类选择器</title>
+    <style>
+        /* 不用html标签做类名 */
+        .red {
+            color: orange;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        /* 可以用“-”来做连接长单词 */
+        .red-blue {
+            color: green;
+        }
+
+        .top {
+            width: 100px;
+            height: 100px;
+            /* 背景颜色 */
+            background-color: red;
+        }
+
+        .in {
+            width: 100px;
+            height: 100px;
+            /* 背景颜色 */
+            background-color: blue;
+        }
+
+        .color {
+            color: springgreen;
+        }
+
+        .fontsize {
+            font-size: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="red">冰雨</li>
+        <li class="blue">来生缘</li>
+        <li>李香兰</li>
+        <li>生僻字</li>
+        <li class="red-blue">江南</li>
+    </ul>
+    <div class="red">对标签内的属性进项选择</div>
+    <p class="red-blue">试一试</p>
+    <!-- 小测试 -->
+    <div class="top">红色盒子</div>
+    <div class="in">中间盒子</div>
+    <div class="top">红色盒子</div>
+    <!-- 多类名,可以复用 -->
+    <div class="color fontsize">多类名</div>
+
+</body>
+
+</html>
