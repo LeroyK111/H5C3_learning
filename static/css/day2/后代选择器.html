@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        /* 后代选择器 */
+        ol li {
+            color: red;
+        }
+
+        /* 可以继续追溯下去 */
+        ol li a {
+            color: yellow;
+        }
+
+        .uh li {
+            color: #0f0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ol>
+
+        <li>我是ol的哈子</li>
+        <li>我是ol的哈子</li>
+        <li>我是ol的哈子</li>
+        <li><a href="#" style="text-decoration: none;">我是孙子</a></li>
+    </ol>
+    <ul class="uh">
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+        <li>我是ul的孩子</li>
+    </ul>
+</body>
+
+</html>

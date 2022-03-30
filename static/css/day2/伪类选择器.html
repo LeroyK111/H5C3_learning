@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        .text a:link {
+            /* 未访问的变色 */
+            color: #f90;
+
+        }
+
+        .text2 a:visited {
+            /* 点击过的变色 */
+            color: #00f;
+        }
+
+        .text3 a:hover {
+            /* 鼠标经过变色 */
+            color: skyblue;
+        }
+
+        .text4 a:active {
+            /* 长点的链接 */
+            color: green;
+        }
+
+        input:focus {
+            /* 默认input */
+            color: yellowgreen;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text1"><a href="#" style="text-decoration: none;">未访问的链接</a></div>
+    <div class="text2"><a href="#" style="text-decoration: none;">已访问的链接</a></div>
+    <div class="text3"><a href="#" style="text-decoration: none;">鼠标经过的链接</a></div>
+    <div class="text4"><a href="#" style="text-decoration: none;">长点的链接</a></div>
+    <input type="text" value="字体变色">
+</body>
+
+</html>

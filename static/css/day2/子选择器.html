@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>文本属性</title>
+    <title>子选择器</title>
     <style>
-        div {
-            color: deeppink;
+        .nav>a {
+            /* 大于号用来表示层级 */
+            color: red;
         }
     </style>
 </head>
 
 <body>
-    <div>给个颜色</div>
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
 </body>
 
 </html>

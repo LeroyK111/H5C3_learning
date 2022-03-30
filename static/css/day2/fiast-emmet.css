@@ -1,0 +1,7 @@
+.one {
+    /* 每个单词第一个字母即可写出css标签 */
+    height: 300px;
+    text-decoration: none;
+    /* 可以c#f00，部分标签可以用缩写参数 */
+    color: #f00;
+}
