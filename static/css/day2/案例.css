@@ -1,0 +1,23 @@
+/* 上层导航栏设置 */
+.Upper_navigation_bar {
+    background-color: #525657;
+    width: 250px;
+    height: 350px;
+}
+
+.Upper_navigation_bar>a {
+    /* 导航栏内容 */
+    display: block;
+    width: 250px;
+    height: 50px;
+    text-decoration: none;
+    color: #fff;
+    text-indent: 2em;
+    /* 调整行间距调整垂直距离 */
+    line-height: 50px;
+    /* vertical-align: top;此属性只适合块本身，不适合文本内容 */
+}
+
+.Upper_navigation_bar>a:hover {
+    background-color: #fe6700;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三大特性</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        div {
+            font: 12px/1.5 "Microsoft YaHei";
+            color: skyblue;
+            background-color: blue;
+        }
+
+        p {
+            font-size: 14px;
+        }
+        .text {
+        /* 比较权重 */
+        color: red;
+        }
+
+        span {
+        color: green;
+        }
+
+        /* 加入重要声明 */
+        span {
+        color: palevioletred!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>父类
+        <p>子类</p>
+    </div>
+    <span class="text">权重比较</span>
+</body>
+
+</html>

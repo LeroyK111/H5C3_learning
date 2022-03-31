@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素突出显示模式</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        span {
+            width: 200px;
+            background-color: red;
+        }
+        .text2 {
+        width: 100px;
+        height: 200px;
+        background-color: skyblue;
+        display: inline-block;
+        }
+        a {
+        width: 150px;
+        height: 50px;
+        background-color: green;
+        /* 把行元素转换成块元素 */
+        display: block;
+        }
+
+        .text {
+        /* display: inline后改变表格大小并不一样 */
+        width: 10000px;
+        height: 100px;
+        background-color: blue;
+        display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>世界最强</div>
+    <p>刘凯</p>
+    <p>
+        <!-- 块元素不能叠加 -->
+        <div>实验</div>
+    </p>
+    <span>你怎么穿着品如的衣服</span><b>品如的衣服</b>
+    <span>老师</span>
+    <!-- a里不准嵌套链接 -->
+    <a href="#">最强<a href="#">世界</a></a>
+    <br><br><br>
+    <!-- a里放行内块元素， -->
+    <div>
+        <a href="https://www.baidu.com"><img src="D:\code\web_learing\HTML+CSS\static\images\logo.jpg" alt="是个图片"
+                width="200"></a>
+    </div>
+    <div>
+        <!-- a标签转换成另一种模式 -->
+        <a href="#">金星阿姨</a>
+    </div>
+    <div class="text">
+        <!-- 转换成行内元素 -->
+        转换成行内元素
+    </div>
+    <span class="text2">行内块元素</span>
+</body>
+
+</html>
