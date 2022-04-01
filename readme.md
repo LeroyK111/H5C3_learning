@@ -515,9 +515,63 @@ html元素一般分为，块元素和行内元素。
 
 ### 盒子模型
 
+页面布局三大核心：盒子模型，浮动，定位。
 
+![image-20220401133057864](readme.assets/image-20220401133057864.png)
 
+![image-20220401133400519](readme.assets/image-20220401133400519.png)
 
+边框属性
+
+![image-20220401133801829](readme.assets/image-20220401133801829.png)
+
+![image-20220401145315435](readme.assets/image-20220401145315435.png)
+
+边框简写
+
+![image-20220401150427062](readme.assets/image-20220401150427062.png)
+
+合理的运用层叠性。
+
+![image-20220401151344010](readme.assets/image-20220401151344010.png)
+
+表格调整
+
+一般来说，表格需要细细调整
+
+![image-20220401155837244](readme.assets/image-20220401155837244.png)
+
+![image-20220401155903521](readme.assets/image-20220401155903521.png)
+
+边框粗细影响盒子大小
+
+![image-20220401161808540](readme.assets/image-20220401161808540.png)
+
+内边距，边框和内容的关系
+
+![image-20220401162120677](readme.assets/image-20220401162120677.png)
+
+外边距（会影响边框大小）
+
+![image-20220401163424377](readme.assets/image-20220401163424377.png)
+
+常用外边距写法：
+
+*margin*: 0 auto;水平居中
+
+解决外边距塌陷
+
+![image-20220401172648021](readme.assets/image-20220401172648021.png)
+
+直接清除所有元素的内外边距
+
+![image-20220401172957885](readme.assets/image-20220401172957885.png)
+
+![image-20220401172902428](readme.assets/image-20220401172902428.png)
+
+分析布局
+
+![image-20220401173346176](readme.assets/image-20220401173346176.png)
 
 
 

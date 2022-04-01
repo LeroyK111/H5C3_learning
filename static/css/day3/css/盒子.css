@@ -1,0 +1,49 @@
+.text {
+    width: 300px;
+    height: 200px;
+    background-color: pink;
+    /* 边框的粗细，会影响盒子大小 */
+    border-width: 2px;
+    /* 边框风格 */
+    border-style: solid;
+    border-style: outset;
+    border-style: inset;
+    /* 边框颜色 */
+    border-color: red;
+    /* 设置内边距 */
+    padding-left: 20px;
+    padding-top: 20px;
+    /* 外边框距离 */
+    margin-bottom: 10px;
+}
+
+.text1 {
+    width: 300px;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+
+.text2 {
+    width: 400px;
+    height: 400px;
+    background-color: green;
+}
+
+.text2 .text21 {
+    width: 200px;
+    height: 200px;
+    color: red;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+.text2 .text22 {
+    display: block;
+    width: 200px;
+    height: 200px;
+    color: red;
+    background-color: #000;
+}

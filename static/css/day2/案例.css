@@ -8,11 +8,13 @@
 .Upper_navigation_bar>a {
     /* 导航栏内容 */
     display: block;
-    width: 250px;
+    /* width: 220px; */
     height: 50px;
     text-decoration: none;
     color: #fff;
-    text-indent: 2em;
+    /* text-indent: 2em; */
+    /* 推荐使用padding */
+    padding-left: 30px;
     /* 调整行间距调整垂直距离 */
     line-height: 50px;
     /* vertical-align: top;此属性只适合块本身，不适合文本内容 */

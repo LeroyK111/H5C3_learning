@@ -1,0 +1,23 @@
+
+
+
+.text {
+    width: 400px;
+    height: 400px;
+}
+
+
+.text, td{
+    border: 1px solid pink;
+    /* 合并边框 */
+    border-collapse: collapse;
+    /* 文字居中 */
+    text-align: center;
+}
+
+.text th {
+    height: 80px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+

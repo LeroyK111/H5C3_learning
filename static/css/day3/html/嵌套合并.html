@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嵌套合并</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            margin-top: 40px;
+            /* 避免塌陷，可以追加边框 */
+            /* border: 1px solid transparent; */
+            /* 追加内边距 */
+            /* padding-top: 1px; */
+            /* 清除外边距塌陷，隐藏浮动 */
+            overflow: hidden;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>
