@@ -1,0 +1,58 @@
+/* 上层导航栏设置 */
+* {
+    /* 消除页边距 */
+    padding: 0px;
+    margin: 0px;
+}
+
+.bigbox {
+    width: 1000px;
+    height: 350px;
+    background-color: white;
+    /* 水平居中 */
+    margin: 0 auto;
+}
+
+
+.Upper_navigation_bar {
+    background-color: rgba(82, 86, 87, 0.9);
+    width: 250px;
+    height: 350px;
+    float: left;
+}
+
+.Upper_navigation_bar>a {
+    /* 导航栏内容 */
+    display: block;
+    /* width: 220px; */
+    height: 50px;
+    text-decoration: none;
+    color: #fff;
+    /* text-indent: 2em; */
+    /* 推荐使用padding */
+    padding-left: 30px;
+    /* 调整行间距调整垂直距离 */
+    line-height: 50px;
+    /* vertical-align: top;此属性只适合块本身，不适合文本内容 */
+}
+
+.Upper_navigation_bar>a:hover {
+    background-color: #fe6700;
+}
+
+
+.showimg {
+    float: left;
+}
+
+.showimg img {
+    height: 350px;
+    width: 750px;
+}
+
+
+
+
+
+
+

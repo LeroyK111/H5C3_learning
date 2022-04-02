@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.bigbox {
+    background-color: wheat;
+}
+
+.left, .right {
+    width: 150px;
+    height: 200px;
+    background-color: pink;
+    /* display: inline-block; */
+    /* 加入浮动 */
+    /* float: left; */
+}
+
+.bigbox>.text {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    /* float: left; */
+    float: left;
+}
+
+.right {
+    height: 350px;
+    background-color: #000;
+    color: white;
+    /* float: right; */
+}
+
+
+
+.text2 {
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    /* 不管原先是什么模式的元素，加了浮动，都具有行内块元素 */
+    float: left;
+}
+
+
+p {
+    height: 200px;
+    /* 行内块元素，根据内容大小 */
+    float: right;
+    background-color: purple;
+}

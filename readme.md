@@ -589,6 +589,127 @@ margin不会撑大盒子，padding则会。
 
 4.布局学习主要是由UI设计先做，然后按照比列去做。
 
+圆角边框
+
+![image-20220401195733357](readme.assets/image-20220401195733357.png)
+
+![image-20220401200810895](readme.assets/image-20220401200810895.png)
+
+![image-20220401214717731](readme.assets/image-20220401214717731.png)
+
+![image-20220402160030821](readme.assets/image-20220402160030821.png)
+
+![image-20220402160208879](readme.assets/image-20220402160208879.png)
+
+### 网页布局三种方式
+
+![image-20220402160739875](readme.assets/image-20220402160739875.png)
+
+标准流
+
+![image-20220402160851977](readme.assets/image-20220402160851977.png)
+
+### 浮动
+
+★改变标签默认排列方式
+
+![image-20220402161930378](readme.assets/image-20220402161930378.png)
+
+浮动标签会脱离标准
+
+![image-20220402163122767](readme.assets/image-20220402163122767.png)
+
+![image-20220402164046532](readme.assets/image-20220402164046532.png)
+
+![image-20220402171218275](readme.assets/image-20220402171218275.png)
+
+准备标准流父盒子。然后放浮动盒子
+
+![image-20220402171539727](readme.assets/image-20220402171539727.png)
+
+![image-20220402181335408](readme.assets/image-20220402181335408.png)
+
+![image-20220402181432371](readme.assets/image-20220402181432371.png)
+
+先用标准流的构建大致。
+
+两个注意点：
+
+![image-20220402184342488](readme.assets/image-20220402184342488.png)
+
+![image-20220402184539110](readme.assets/image-20220402184539110.png)
+
+父盒子：不应该给高度。但是子盒子浮动会导致父盒子失去高度。所以需要清除浮动。
+
+![image-20220402191801313](readme.assets/image-20220402191801313.png)
+
+![image-20220402191856216](readme.assets/image-20220402191856216.png)
+
+清除浮动，方法一
+
+![image-20220402192659867](readme.assets/image-20220402192659867.png)
+
+清除浮动，方法二
+
+![image-20220402193018398](readme.assets/image-20220402193018398.png)
+
+清除浮动，方法三
+
+![image-20220402193631045](readme.assets/image-20220402193631045.png)
+
+```
+.clearfix:after {
+            content: "";
+            display: block;
+            height: 0px;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            /* IE6/7专有 */
+            *zoom: 1;
+        }
+```
+
+![image-20220402195521898](readme.assets/image-20220402195521898.png)
+
+```
+.clearfix:after,
+        .clearfix::before {
+            /* 伪元素 */
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            /* IE6/7专有 */
+            *zoom: 1;
+        }
+```
+
+![image-20220402201443097](readme.assets/image-20220402201443097.png)
+
+### web端UI设置
+
+1.学习下PS
+
+2.图层切图
+
+3.切片切图
+
+4.PS插件cutterman（推荐）
+
+![image-20220402205010063](readme.assets/image-20220402205010063.png)
+
+
+
+
+
 
 
 
