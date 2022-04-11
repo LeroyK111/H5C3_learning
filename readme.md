@@ -20,6 +20,8 @@
 
 推荐网站：https://www.w3school.com.cn/
 
+UI设计：**Sketch**
+
 由于markdown的特性，html不适合在md文件里书写。故截图
 
 目的：精通网页布局，前端必备，为JavaScript做准备！
@@ -694,7 +696,7 @@ margin不会撑大盒子，padding则会。
 
 ![image-20220402201443097](readme.assets/image-20220402201443097.png)
 
-### web端UI设置
+### 常用工具和布局思路
 
 1.学习下PS
 
@@ -706,11 +708,25 @@ margin不会撑大盒子，padding则会。
 
 ![image-20220402205010063](readme.assets/image-20220402205010063.png)
 
+![image-20220407140202271](readme.assets/image-20220407140202271.png)
+
+#### 静态页面笔记：
+
+1.实际开发中，导航栏我们不会用a标签，而是用列表标签包含a标签的做法，链接<li><a>
+
+![image-20220408205317674](readme.assets/image-20220408205317674.png)
+
+2.
 
 
 
 
 
+
+
+
+
+### 定位
 
 
 

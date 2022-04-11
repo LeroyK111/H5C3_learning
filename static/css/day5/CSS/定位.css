@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.w {
+    /* 核心区域 */
+    width: 1200px;
+    margin: auto;
+}
+body {
+    background-color: #f3f5f7;
+}
+li {
+    /* 清除列表格式 */
+    list-style: none;
+}
+
+a {
+    /* 让所有的a标签去除下划线 */
+    text-decoration: none;
+}
+
+.header {
+    /* background-color: pink; */
+    height: 42px;
+    /* 此地方会层叠w的样式 */
+    margin: 30px auto;
+}
+
+.header .logo{
+    float: left;
+    width: 198px;
+    height: 42px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 42px;
+    background-color: plum;
+}
+
+.nav {
+    float: left;
+    margin-left: 60px;
+}
+
+.nav ul li {
+    float: left;
+    margin: 0px 15px;
+}
+
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+
+
+
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: red;
+}
+
+
+.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    /* background-color: skyblue; */
+    margin-left: 50px;
+}
+
+.search input {
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+
+.search input:valid {
+    /* 对搜索框做伪类 */
+    color: black;
+}
+
+
+
+
+.search .sub {
+    float: left;
+    width: 50px;
+    height: 42px;
+    border: 0;
+    background-image: url("../images/按钮.png");
+}
+
+
+
+
+.login {
+    /* 图片和文字没有对齐 */
+    float: right;
+    line-height: 42px;
+    margin-right: 32px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.banner {
+    /* 版心 */
+    height: 421px;
+    background-color: #1c036c;
+}
+
+
+.banner .w {
+    height: 421px;
+    background: url(../images/banner-background-image.png) no-repeat top center;
+}
+
+
+
+.subnav {
+    float: left;
+    height: 421px;
+    width: 190px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.subnav ul li a {
+    display: block;
+    width: 150px;
+    height: 46px;
+    font-size: 14px;
+    color: #fff;
+    /* 调整行间距 */
+    line-height: 46px;
+    /* 内边距 */
+    padding: 0px 20px;
+}
+
+
+.subnav ul li a:hover {
+    color: red;
+}
+
+
+.subnav ul li a span {
+    float: right;
+}
+
+
+
+.right_box {
+    float: right;
+    width: 230px;
+    height: 300px;
+    /* 没有发生外边距合并，浮动的盒子不会由外边距合并问题 */
+    margin-top: 50px;
+    background-color: #fff;
+}
+
+
+.right_box h2 {
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    background-color: #9bceea;
+    font-size: 18px;
+    color: white;
+}
+
+
+.right_box .classdb {
+    height: 252px;
+    background-color: pink;
+}
