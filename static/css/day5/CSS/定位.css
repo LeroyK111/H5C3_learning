@@ -179,7 +179,93 @@ a {
 }
 
 
-.right_box .classdb {
-    height: 252px;
-    background-color: pink;
+.classdb {
+    padding: 0 20px;
+}
+
+
+.classdb ul li {
+    height: 40px;
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.right_box div ul li a {
+    font-size: 16px;
+    color: #4e4e4e;
+    font-weight: bold;
+}
+
+.classdb ul li a p {
+    font-size: 10px;
+    color: #a5a5a5;
+    font-weight: 400;
+}
+
+
+.classdb .more {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+
+
+
+/* 精品推荐小模块 */
+.recommended {
+    margin-top: 10px;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    /* 行高会继承给三个孩子 */
+    line-height: 60px;
+}
+
+
+.recommended .tuijian {
+    float: left;
+    font-size: 16px;
+    color: #00a4ff;
+    font-weight: bold;
+    padding: 0 30px;
+}
+
+
+.recommended .tuijian:hover {
+    color: red;
+}
+
+
+.recommended .nav li{
+    float: left;
+}
+
+.recommended .nav li a:hover {
+    color: red;
+}
+
+.recommended .nav li a {
+    height: 16px;
+    border-left: 2px solid #a5a5a5;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.recommended .diy {
+    color: skyblue;
+    font-weight: bold;
+    font-size: 16px;
+    float: right;
+    padding-right: 40px;
+}
+
+.recommended .diy:hover {
+    color: red;
 }
