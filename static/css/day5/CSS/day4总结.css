@@ -22,6 +22,28 @@ a {
     text-decoration: none;
 }
 
+
+/* 清除浮动 */
+.clearfix:after,
+.clearfix::before {
+    /* 双伪元素 */
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    /* IE6/7专有 */
+    *zoom: 1;
+}
+
+
+
+
+
 .header {
     /* background-color: pink; */
     height: 42px;
@@ -243,6 +265,13 @@ a {
 }
 
 
+
+.recommended .nav {
+    float: left;
+    margin-left: 30px;
+}
+
+
 .recommended .nav li{
     float: left;
 }
@@ -253,13 +282,14 @@ a {
 
 .recommended .nav li a {
     height: 16px;
-    border-left: 2px solid #a5a5a5;
+    color: #050505;
+    border-left: 1px solid #a5a5a5;
     text-align: center;
     padding: 0 30px;
 }
 
 .recommended .diy {
-    color: skyblue;
+    color: #00a4ff;
     font-weight: bold;
     font-size: 16px;
     float: right;
@@ -267,5 +297,139 @@ a {
 }
 
 .recommended .diy:hover {
+    color: red;
+}
+
+/* 核心区域 */
+.box {
+    margin-top: 30px;
+}
+
+.box .box_hd {
+    height: 45px;
+}
+
+
+.box_hd h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+    line-height: 45px;
+}
+
+
+.box_hd a {
+    float: right;
+    line-height: 45px;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-right: 20px;
+}
+
+.box_hd a:hover {
+    color: red;
+}
+
+/* 核心区域 */
+.box_bd ul {
+    width: 1225px;
+}
+
+
+
+.box_bd ul li {
+    width: 228px;
+    height: 270px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+.box_bd ul li img {
+    width: 228px;
+    height: 155px;
+}
+
+
+.box_bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    color: #050505;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.box_bd .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+
+
+.box_bd .info span {
+    color: pink;
+}
+
+
+
+
+
+/* 写底部盒子 */
+.footer {
+    background-color: #fff;
+    height: 415px;
+    box-shadow: 0 -2px 1px rgba(0, 0, 0, .1);
+}
+
+.footer .w {
+    /* margin-top则会出现外边距合并 */
+    padding-top: 35px;
+}
+
+.footer .copyright {
+    float: left;
+}
+.footer .copyright p {
+    margin: 20px 0 15px 0;
+    font-size: 12px;
+    color: #666;
+}
+.footer .copyright .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    line-height: 33px;
+    text-align: center;
+    font-size: 16px;
+    color: #00a4ff;
+}
+
+
+.footer .links {
+    float: right;
+}
+
+
+.footer .links dl {
+    float: left;
+    margin-left: 100px;
+}
+
+
+.footer .links dl dt {
+    font-style: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.footer .links dl dd a {
+    color: #333;
+    font-style: 12px;
+}
+
+.footer .links dl dd a:hover {
     color: red;
 }
