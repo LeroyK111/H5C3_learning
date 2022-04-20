@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子绝父相</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .clearfix:after,
+        .clearfix::before {
+            /* 双伪元素 */
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            /* IE6/7专有 */
+            *zoom: 1;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        a:hover {
+            color: red;
+        }
+
+        .father {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: pink;
+        }
+
+        .son1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 350px;
+            background-color: #fff;
+            left: 0px;
+        }
+
+        .son2 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            top: 350px;
+            right: 0px;
+        }
+
+
+
+        .son3 {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            background-color: #fff;
+            bottom: 50px;
+            left: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son1">左箭头</div>
+        <div class="son2">右箭头</div>
+        <div class="son3">点图</div>
+    </div>
+</body>
+
+</html>

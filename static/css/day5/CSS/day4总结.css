@@ -338,6 +338,8 @@ a {
 
 
 .box_bd ul li {
+    /* 给每个盒子加个相对定位 */
+    position: relative;
     width: 228px;
     height: 270px;
     float: left;
@@ -347,7 +349,7 @@ a {
 }
 
 
-.box_bd ul li img {
+.box_bd ul li>img {
     width: 228px;
     height: 155px;
 }
@@ -370,6 +372,13 @@ a {
 
 .box_bd .info span {
     color: pink;
+}
+
+.box_bd em>img {
+    /* 加入相对定位 */
+    position: absolute;
+    top: 20px;
+    right: -5px;
 }
 
 

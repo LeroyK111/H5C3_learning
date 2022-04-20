@@ -1,0 +1,76 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.clearfix:after,
+.clearfix::before {
+    /* 双伪元素 */
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    /* IE6/7专有 */
+    *zoom: 1;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: red;
+}
+
+
+.box1 {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    height: 300px;
+    background-color: skyblue;
+}
+
+.box2 {
+    position: static;
+    width: 300px;
+    height: 300px;
+    background-color: pink;
+}
+
+
+.yeye {
+    /* box3默认以最近子一级参考为参考 */
+    position: relative;
+    width: 700px;
+    height: 700px;
+    background-color: darkmagenta;
+}
+
+.father {
+    /* 给父亲加个定位 */
+    /* position: relative; */
+    width: 500px;
+    height: 500px;
+    background-color: green;
+}
+
+
+.box3 {
+    /* 绝对定位会造成浮动置顶效果 */
+    /* 没有父元素OR没有给father加定位，则子盒子以web页面为基准定位 */
+    position: absolute;
+    top: 10px;
+    right: 200px;
+    width: 200px;
+    height: 200px;
+    background-color: gold;
+}

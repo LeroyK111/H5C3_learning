@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .clearfix:after,
+        .clearfix::before {
+            /* 双伪元素 */
+            content: "";
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            /* IE6/7专有 */
+            *zoom: 1;
+        }
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+        a:hover {
+            color: red;
+        }
+
+        /* 做个可视窗口 */
+        .w {
+            width: 800px;
+            height: 6000px;
+            background-color: pink;
+            margin: auto;
+        }
+
+
+        .nav {
+            /* 固定定位 */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+
+        }
+
+        .nava {
+            width: 40px;
+            height: 80px;
+            background-color: skyblue;
+            position: fixed;
+            /* 贴靠版心的一种方法 */
+            left: 50%;
+            bottom: 20%;
+            margin-left: 405px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w">
+        <div class="nav">
+            <img src="../images/dj.jpg" alt="">
+        </div>
+        <!-- 贴靠版心 -->
+        <div class="nava">固定定位</div>
+    </div>
+
+</body>
+
+</html>

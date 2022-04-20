@@ -1,0 +1,9 @@
+
+
+/* 引入index.css */
+@import url(../CSS/index.css);
+
+/* day5总结 */
+.tb-promo {
+    margin: auto;
+}
