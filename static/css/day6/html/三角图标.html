@@ -8,12 +8,52 @@
     <title>做个三角符号</title>
     <link rel="stylesheet" href="../css/index.css">
     <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border: 10px solid pink; */
+            /* 没有大小时，只给一个边框即可生成三角形 */
+            border-top: 10px solid pink;
+            border-left: 10px solid red;
+            border-bottom: 10px solid blue;
+            border-right: 10px solid green;
+        }
 
+        .box2 {
+            width: 0;
+            height: 0;
+            /* 全透明 */
+            border: 60px solid transparent;
+            border-top-color: pink;
+        }
+
+        .jd {
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+            position: relative;
+        }
+
+        .box3 {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-bottom-color: black;
+            left: 50%;
+            margin-left: -50px;
+            top: -100px;
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <!-- 做个京东效果 -->
+    <div class="jd">
+        <div class="box3"></div>
+    </div>
 </body>
 
 </html>
