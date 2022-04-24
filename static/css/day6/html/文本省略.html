@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>溢出的文字省略</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .text {
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 如果文字显示不完全，则自动换行 */
+            /* white-space: normal; */
+            /* 强制一行内显示 */
+            white-space: nowrap;
+            /* 让溢出的部分隐藏 */
+            overflow: hidden;
+            /* 让超出的部分用省略号代替 */
+            text-overflow: ellipsis;
+        }
+
+        .text2 {
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            overflow: hidden;
+            text-overflow: hidden;
+            /* 弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 限制在一个块元素显示的文本行数 */
+            -webkit-line-clamp: 1;
+            /* 设置或检索伸缩盒子对象的子元素排列方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text">
+        啥也不说，此处省略一万字
+    </div>
+    <div class="text2">
+        <!-- 多行文本省略，有兼容性问题，适合webkit浏览器，主要在移动端 -->
+        啥也不说，此处省略一万字
+        啥也不说，此处省略一万字
+        啥也不说，此处省略一万字
+        啥也不说，此处省略一万字
+    </div>
+</body>
+
+</html>

@@ -9,9 +9,11 @@
     width: 1200px;
     margin: auto;
 }
+
 body {
     background-color: #f3f5f7;
 }
+
 li {
     /* 清除列表格式 */
     list-style: none;
@@ -51,7 +53,7 @@ a {
     margin: 30px auto;
 }
 
-.header .logo{
+.header .logo {
     float: left;
     width: 198px;
     height: 42px;
@@ -133,6 +135,11 @@ a {
     margin-right: 32px;
     font-size: 14px;
     color: #666;
+}
+
+.login img {
+    /* 加个对齐 */
+    vertical-align: middle;
 }
 
 
@@ -272,7 +279,7 @@ a {
 }
 
 
-.recommended .nav li{
+.recommended .nav li {
     float: left;
 }
 
@@ -400,11 +407,13 @@ a {
 .footer .copyright {
     float: left;
 }
+
 .footer .copyright p {
     margin: 20px 0 15px 0;
     font-size: 12px;
     color: #666;
 }
+
 .footer .copyright .app {
     display: block;
     width: 118px;

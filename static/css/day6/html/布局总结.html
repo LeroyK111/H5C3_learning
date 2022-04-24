@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局总结</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        ul li {
+            /* 细线边框 */
+            float: left;
+            list-style: none;
+            width: 150px;
+            height: 200px;
+            border: 1px solid red;
+            /* 小技巧 */
+            margin-left: -1px;
+        }
+
+        ul li:hover {
+            /* 加入相对定位解决盒子被压住的情况  */
+            position: relative;
+            border: 2px solid gray;
+            box-shadow: 0 1px 2px grey;
+            cursor: pointer;
+            /* 提高层级也可以解决盒子被压住的情况 */
+            /* z-index: 1; */
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>

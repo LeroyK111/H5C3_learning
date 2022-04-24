@@ -1,0 +1,76 @@
+* {
+    /* 清空内外边距 */
+    margin: 0;
+    padding: 0
+}
+
+em,
+i {
+    /* 斜体不倾斜 */
+    font-style: normal
+}
+
+li {
+    /* 去掉li的的样式 */
+    list-style: none
+}
+
+img {
+    /* 图片无边框，且文字环绕居中 */
+    border: 0;
+    vertical-align: middle
+}
+
+button {
+    /* 鼠标变小手 */
+    cursor: pointer
+}
+
+a {
+    /* 链接样式 */
+    color: #666;
+    text-decoration: none
+}
+
+a:hover {
+    /* 伪类选择 */
+    color: #c81623
+}
+
+button,
+input {
+    /* 选择字体家族 */
+    font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif
+}
+
+/* \5B8B\4F53表示宋体unicode编码 */
+
+body {
+    /* 抗锯齿性 */
+    -webkit-font-smoothing: antialiased;
+    /* 背景色 */
+    background-color: #fff;
+    /* 字体 */
+    font: 12px/1.5 Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "\5B8B\4F53", sans-serif;
+    /* 字体颜色 */
+    color: #666
+}
+
+.hide,
+.none {
+    /*  */
+    display: none
+}
+
+/* 伪元素清除浮动 */
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}

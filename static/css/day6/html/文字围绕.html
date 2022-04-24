@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字围绕</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .box {
+            width: 300px;
+            height: 70px;
+            background-color: pink;
+            margin: 200px auto;
+            padding: 5px;
+        }
+
+        .pic {
+            float: left;
+            width: 120px;
+            height: 60px;
+        }
+
+        .pic img {
+            width: 100%;
+        }
+
+        .box p {
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: hidden;
+            /* 弹性伸缩盒子模型显示 */
+            display: -webkit-box;
+            /* 限制在一个块元素显示的文本行数 */
+            -webkit-line-clamp: 3;
+            /* 设置或检索伸缩盒子对象的子元素排列方式 */
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="pic">
+            <img src="../img/text.jpg" alt="">
+        </div>
+        <p>拉萨大家发咯撒大窟窿反馈垃圾啊辣椒发考虑到上来看反倒是绿卡了肯定是就拉开圣诞节绿卡角度看lsj</p>
+    </div>
+</body>
+
+</html>

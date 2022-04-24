@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角强化</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .box1 {
+            float: left;
+            position: relative;
+            top: 0;
+            left: 0;
+            height: 100px;
+            width: 500px;
+            background-color: red;
+            border: 1px solid red;
+            border-left: 0;
+            color: #fff;
+            font-size: 80px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+
+        .box2 {
+            float: left;
+            position: absolute;
+            left: 450px;
+            width: 0;
+            height: 0;
+            /* 构造了一个半个三角形 */
+            border-top: 101px solid transparent;
+            border-left: 0 solid red;
+            border-bottom: 0 solid blue;
+            border-right: 51px solid #fff;
+        }
+
+        .box3 {
+            float: left;
+            height: 100px;
+            width: 500px;
+            background-color: #fff;
+            border: 1px solid red;
+            margin-left: -1px;
+            font-size: 80px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+            text-decoration: line-through;
+        }
+
+        .box4 {
+            height: 300px;
+            width: 1500px;
+            background-color: #ccc;
+        }
+
+        .box5 {
+            width: 0;
+            height: 0;
+            border-color: transparent skyblue transparent transparent;
+            border-style: solid;
+            border-width: 100px 50px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        $800
+    </div>
+    <div class="box2"></div>
+    <div class="box3">$1000</div>
+    <!-- 推荐方式box5 -->
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+
+</html>
