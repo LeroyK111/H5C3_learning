@@ -808,7 +808,95 @@ margin不会撑大盒子，padding则会。
 
 ![image-20220420204030806](readme.assets/image-20220420204030806.png)
 
-### 定位
+使用定位时要注意
+
+先left后right，先top后bottom
+
+![image-20220423195930145](readme.assets/image-20220423195930145.png)
+
+#### 定位小总结
+
+标准流：盒子竖直排列。
+
+浮动：让盒子横向排列。（做展示）
+
+定位：让盒子可以放在任意位置。（JS可以做下拉菜单）
+
+### **元素的显示与隐藏**
+
+可关闭的插图广告。
+
+![image-20220423211039919](readme.assets/image-20220423211039919.png)
+
+#### ★display显示隐藏
+
+display：none; 隐藏对象，清除占位。
+
+display：block; 转换块级元素，并且显示元素。
+
+应用广泛，搭配JS可以做很多特效。  
+
+#### visibility显示隐藏
+
+*visibility*: visible; 元素可视
+
+ *visibility*: hidden; 元素隐藏，但不清除占位。
+
+#### overflow溢出显示隐藏
+
+overflow: visible; 显示溢出
+
+overflow: hidden; 隐藏溢出
+
+overflow: scroll; 让内容滚动
+
+overflow: auto; 自动选择滚不滚动
+
+### CSS高级技巧
+
+#### 精灵图
+
+**web页面以左上角为坐标原点**
+
+![image-20220423221214784](readme.assets/image-20220423221214784.png)
+
+CSS精灵技术：将网页中的一些小背景图，整合到一张大图中，客户端根据需要进行分割显示。（减少服务器压力，只要定位精确，很方便）
+
+![image-20220423221528071](readme.assets/image-20220423221528071.png)
+
+![image-20220423223225045](readme.assets/image-20220423223225045.png)
+
+如何用PS切片
+
+![image-20220423225859823](readme.assets/image-20220423225859823.png)
+
+#### 字体图标
+
+![image-20220423230502222](readme.assets/image-20220423230502222.png)
+
+![image-20220423230550110](readme.assets/image-20220423230550110.png)
+
+下载方式：
+
+
+
+![image-20220423232117158](readme.assets/image-20220423232117158.png)
+
+使用方式：
+
+![image-20220423231925004](readme.assets/image-20220423231925004.png)
+
+字体格式
+
+![image-20220423232251897](readme.assets/image-20220423232251897.png)
+
+该方式不推荐
+
+![image-20220423235347006](readme.assets/image-20220423235347006.png)
+
+根据每次下载的文件夹的不同，可以不断添加自己想要的图标。
+
+#### CSS三角
 
 
 
@@ -816,22 +904,33 @@ margin不会撑大盒子，padding则会。
 
 
 
-**现实隐藏的两种方式和区别**
 
 
 
 
 
 
+#### 常见CSS用户界面样式
+
+#### 能够说出常见的布局技巧
 
 ## H5C3进阶：
 
+#### H5新特性
 
-
-
-
-
-
-
+#### C3新特性
 
 ## 实战项目：
+
+电商网站
+
+
+
+
+
+
+
+
+
+
+

@@ -1,9 +1,84 @@
-
-
 /* 引入index.css */
 @import url(../CSS/index.css);
 
 /* day5总结 */
 .tb-promo {
-    margin: auto;
+    position: relative;
+    width: 520px;
+    height: 280px;
+    background-color: pink;
+    /* 相对定位不脱标 */
+    margin: 100px auto;
+}
+
+.tb-promo img {
+    /* 约束图片 */
+    width: 520px;
+    height: 280px;
+}
+
+
+li {
+    list-style: none;
+}
+
+.l {
+    /* 使用绝对定位 */
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 20px;
+    height: 30px;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    color: white;
+    line-height: 30px;
+    /* 文字样式 */
+    text-decoration: none;
+}
+
+
+.prev {
+    left: 0;
+    /* 圆角 */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+
+.next {
+    /* 定位，如果一个盒子既有left属性，又有right属性，则执行left属性，先左后右先上后下 */
+    right: 0;
+    /* 圆角 */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+
+.promo-nav {
+    width: 70px;
+    height: 13px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -35px;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 7px;
+}
+
+
+.promo-nav li {
+    width: 8px;
+    height: 8px;
+    float: left;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 3px;
+}
+
+
+
+.promo-nav li:hover {
+    background-color: red;
 }

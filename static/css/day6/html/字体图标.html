@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字体图标</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <!-- 方式二，引入类名 -->
+    <link rel="stylesheet" href="../font/font_0rqzksph6u3i/iconfont.css">
+    <!-- 方式三，导入js -->
+    <script src="../font/font_0rqzksph6u3i/iconfont.js"></script>
+    <style>
+        /* 方式一 */
+        @font-face {
+            /* 自定义名字，这里我们默认 */
+            font-family: 'iconfont';
+            /* 这里写导入字体的文件夹名字 */
+            src: url(../font/font_0rqzksph6u3i/iconfont.ttf) format('truetype');
+        }
+
+
+
+        .iconfont {
+            /* 这里选择 */
+            font-family: "iconfont" !important;
+            /* 设置字体样式 */
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+
+        .icon {
+            /* 设置大小 */
+            font-size: 100px;
+            width: 2em;
+            height: 2em;
+            vertical-align: -0.15em;
+            /* svg的一个属性 */
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 这里要查看图标指代的名字 -->
+    <span class="iconfont" style="font-size: 200px;">&#xf0194;</span>
+    <!-- 这里是复制demo.html的东西，有点蠢 -->
+    <span class="iconfont" style="font-size: 200px;"></span>
+    <!-- 用方式二导入图标 -->
+    <span class="iconfont icon-qichejinrong" style="font-size: 200px;"></span>
+    <!-- 推荐方式三，用js文件导入 -->
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-jinrong"></use>
+    </svg>
+</body>
+
+</html>
