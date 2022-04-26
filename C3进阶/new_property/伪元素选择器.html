@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+
+        .box1::before {
+            /* 权重是2 */
+            /* content必须要写 */
+            /* 头部加入盒子 */
+            content: "before";
+            display: inline-block;
+            width: 30px;
+            height: 40px;
+            background-color: purple;
+
+        }
+
+        .box1::after {
+            /* 尾部加个盒子 */
+            content: "after";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        内容
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过度动画</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 过度效果：属性对象 过度时间 过度效果  */
+            /* transition: width 3s, background-color 1s ease 0.1s, transform 2s; */
+            /* 变换所有属性 */
+            transition: all 0.5s;
+        }
+
+        div:hover {
+            width: 400px;
+            background-color: skyblue;
+            /* 2D旋转，2d旋转过会详讲 */
+            transform: rotate(180deg);
+        }
+
+        article {
+            width: 200px;
+            height: 100px;
+            background-color: #ccc;
+            /* 过度效果：属性对象 过度时间 过度效果 延时时间 */
+            transition: width 3s ease-in-out 1s;
+        }
+
+        article:hover {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <article></article>
+</body>
+
+</html>

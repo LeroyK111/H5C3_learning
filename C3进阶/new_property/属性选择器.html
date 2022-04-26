@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增属性选择器</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        article {
+            height: 100px;
+            background-color: pink;
+        }
+
+        .box1 input[placeholder] {
+            /* 利用属性键，进行同型筛选[] */
+            color: pink;
+        }
+
+        .box2 input[type="text"] {
+            /* 利用键值进行筛选 */
+            background-color: skyblue;
+        }
+
+        .box3 div[class^="icon"] {
+            /* 选择开头的某些元素，正则表达式 */
+            background-color: red;
+        }
+
+
+        .box4 div[class$="icon"] {
+            /* 选择结尾的某些元素，正则表达式 */
+            background-color: skyblue;
+        }
+
+
+        .box5 div[class*="icn"] {
+            /* 选择包含的元素，正则表达式 */
+            background-color: orchid;
+        }
+    </style>
+</head>
+
+<body>
+    <article class="box1">
+        <input type="text" placeholder="请输入用户名">
+        <input type="text">
+    </article>
+    <article class="box2">
+        <input type="text" name="" id="">
+        <input type="password" name="" id="">
+    </article>
+    <article class="box3">
+        <div class="icon1">1</div>
+        <div class="icon2">2</div>
+        <div class="icon3">3</div>
+        <div class="icon4">4</div>
+    </article>
+    <article class="box4">
+        <div class="1icon">1</div>
+        <div class="2icon">2</div>
+        <div class="3icon">3</div>
+        <div class="4icon">4</div>
+    </article>
+    <article class="box5">
+        <div class="1icn8789984">1</div>
+        <div class="2icn8798745">2</div>
+        <div class="3icn68789">3</div>
+        <div class="4icn654">4</div>
+    </article>
+</body>
+
+</html>

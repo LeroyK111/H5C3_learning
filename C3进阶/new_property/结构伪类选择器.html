@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        ul li:first-child {
+            /* 选择第一个子类 */
+            background-color: pink;
+        }
+
+        ul li:last-child {
+            /* 最后一个孩子 */
+            background-color: skyblue;
+        }
+
+        ul li:nth-child(5) {
+            /* 可以是数字，可以公式，可以是关键字 */
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+        <li>第5个</li>
+        <li>第6个</li>
+        <li>第7个</li>
+        <li>第8个</li>
+        <li>第9个</li>
+        <li>第10个</li>
+    </ul>
+</body>
+
+</html>

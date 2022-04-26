@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* nth-child执行时首先执行nth-child排列，然后执行再看是不是li，如果顺序对而类型不对，则什么都不选 */
+        ul li:nth-child(even) {
+            /* 筛选出偶数 */
+            background-color: #ccc;
+        }
+
+        ul li:nth-child(odd) {
+            /* 筛选奇数 */
+            background-color: skyblue;
+        }
+
+
+        ol li:nth-child(2n+1) {
+            /* n默认自加1,从0开始计算 */
+            background-color: pink;
+        }
+
+        /* nth-of-type会把指定元素dt进行全排列，然后不分是否在同一个盒子类，继续筛选 */
+        dl dt:nth-of-type(even) {
+            /* 可编辑筛选 */
+            background-color: pink;
+        }
+
+        dl dt:first-of-type {
+            /* 同类型第一个 */
+            background-color: skyblue;
+        }
+
+        dl dt:last-of-type {
+            /* 同类型最后一个 */
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+        <li>第5个</li>
+        <li>第6个</li>
+        <li>第7个</li>
+        <li>第8个</li>
+        <li>第9个</li>
+        <li>第10个</li>
+    </ul>
+    <ol>
+        <li>第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+        <li>第5个</li>
+        <li>第6个</li>
+        <li>第7个</li>
+        <li>第8个</li>
+        <li>第9个</li>
+        <li>第10个</li>
+    </ol>
+    <dl>
+        <dt>第1个</dt>
+        <dt>第2个</dt>
+        <dt>第3个</dt>
+        <dt>第4个</dt>
+        <dt>第5个</dt>
+        <dt>第6个</dt>
+        <dt>第7个</dt>
+        <dt>第8个</dt>
+        <dt>第9个</dt>
+    </dl>
+</body>
+
+</html>
