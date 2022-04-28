@@ -1,6 +1,9 @@
 * {
     padding: 0px;
     margin: 0px;
+    /* 盒子模型 */
+    box-sizing: border-box;
+    font-size: 14px;
 }
 
 .clearfix:after,
@@ -32,16 +35,41 @@ a:hover {
 
 
 body {
+    /* 抗锯齿 */
     -webkit-font-smoothing: antialiased;
+    /* 背景色默认纯白 */
     background-color: #fff;
 }
 
 
 li {
-    text-decoration: none;
+    /* 去掉li的原点 */
+    list-style: none;
 }
 
 
 input {
     outline: none;
+    border: 0;
+}
+
+
+em,
+i {
+    /* 禁止倾斜 */
+    font-style: normal;
+}
+
+
+img {
+    /* 图片不显示边框 */
+    border: 0;
+    /* 文字环绕 */
+    vertical-align: middle
+}
+
+button {
+    /* 鼠标变小手 */
+    cursor: pointer;
+    border: 0;
 }
