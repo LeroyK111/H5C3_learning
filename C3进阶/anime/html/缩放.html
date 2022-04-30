@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>缩放</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .first {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transition: all 2s;
+            /* 缩放中心点,该点不变 */
+            transform-origin: 0 0;
+        }
+
+        .first:hover {
+            /* 里面写倍数,宽度放大2倍，高度2倍 */
+            transform: scale(2, 2);
+            /* 等比例缩放 */
+            /* transform: scale(2); */
+            /* transform: scale(.5); */
+        }
+
+        .second {
+            float: left;
+            margin: 0 20px;
+            /* 超出的部分隐藏 */
+            overflow: hidden;
+
+        }
+
+        .second img {
+            transition: all .4s;
+        }
+
+        .second img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 动画一 -->
+    <div class="first">不会导致其他盒子脱标</div>
+    <!-- 图片方法 -->
+    <div class="second"><a href="#"><img src="../images/text.jpg" alt=""></a></div>
+    <div class="second"><a href="#"><img src="../images/text.jpg" alt=""></a></div>
+    <div class="second"><a href="#"><img src="../images/text.jpg" alt=""></a></div>
+</body>
+
+</html>

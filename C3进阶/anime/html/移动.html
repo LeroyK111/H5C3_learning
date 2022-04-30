@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>移动</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .first,
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 加个过度效果 */
+            transition: all 3s;
+        }
+
+        .second {
+            background-color: red;
+        }
+
+        .first:hover {
+            /* 使用2d移动 */
+            /* transform: translate(100px, 100px); */
+            /* 按盒子本身的大小取百分比 */
+            transform: translate(50%, 50%);
+            background-color: skyblue;
+            /* 只移动一个坐标 */
+            /* transform: translateX(100px); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">不会导致其他盒子脱标,</div>
+    <div class="second"></div>
+</body>
+
+</html>

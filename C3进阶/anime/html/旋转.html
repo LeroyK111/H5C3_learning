@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .first,
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 加个个度动画 */
+            transition: transform 3s 1s;
+        }
+
+        .second {
+            background-color: skyblue;
+        }
+
+        .first:hover {
+            /* 顺时针 */
+            transform: rotate(180deg);
+            /* 逆时针 */
+            /* transform: rotate(-360deg); */
+        }
+
+        /* 用旋转做三角 */
+        .sanjiao {
+            position: relative;
+            width: 249px;
+            height: 35px;
+            border: 1px solid #000;
+        }
+
+        .sanjiao::after {
+            content: "";
+            position: absolute;
+            top: 9px;
+            right: 15px;
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            transform: rotate(45deg);
+            transition: transform .2s;
+        }
+
+
+        .sanjiao:hover::after {
+            /* 45+180度，默认还是从0度出发 */
+            transform: rotate(225deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">不会导致其他盒子脱标</div>
+    <div class="second"></div>
+    <div class="sanjiao"></div>
+</body>
+
+</html>
