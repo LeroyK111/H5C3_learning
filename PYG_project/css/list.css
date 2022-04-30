@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "iconfont";
+    /* Project id  */
+    src: url('../fonts/font_umz0y2t4q9d/iconfont.ttf') format('truetype');
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.sk {
+    position: absolute;
+    border-left: 1px solid red;
+    left: 190px;
+    top: 40px;
+    padding: 3px 0 0 14px;
+}
+
+
+
+.sk_list {
+    float: left;
+}
+
+.sk_list ul li {
+    float: left;
+}
+
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: bolder;
+    counter-reset: #000;
+}
+
+
+
+.sk_con {
+    float: left;
+}
+
+.sk_con ul li {
+    position: relative;
+    float: left;
+}
+
+
+.sk_con ul li:last-child::after {
+    position: absolute;
+    right: 2px;
+    top: 18px;
+    font-family: "iconfont" !important;
+    font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e665";
+}
+
+
+.sk_con ul li:last-child:hover {
+    color: red;
+}
+
+
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+
+.sk_bd ul li {
+    overflow: hidden;
+    width: 290px;
+    height: 460px;
+    border: 1px solid transparent;
+    float: left;
+    margin: 0 13px 10px 0;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+.sk_bd ul li:hover {
+    border-color: red;
+    box-shadow: 1px 1px 1px slategray;
+}

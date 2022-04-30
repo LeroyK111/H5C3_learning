@@ -164,6 +164,106 @@
 
 
 /* 楼层区 */
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid red;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: red;
+    font-weight: normal;
+}
+
+.box_hd .tab_list {
+    float: right;
+}
+
+.box_hd .tab_list ul li {
+    float: left;
+    position: relative;
+    margin: 0 15px;
+    line-height: 30px;
+}
+
+.box_hd .tab_list ul li:nth-child(-n+8):after {
+    content: "|";
+    position: absolute;
+    color: #e4e4e4;
+    right: -15px;
+}
+
+.floor .w {
+    margin-top: 30px;
+}
+
+
+.box_bd {
+    height: 361px;
+    /* background-color: pink; */
+}
+
+.tab_content .tab_list_one div {
+    float: left;
+}
+
+
+.col_210 {
+    width: 210px;
+    background-color: #f9f9f9;
+    height: 361px;
+    text-align: center;
+}
+
+.col_210 ul {
+    padding-left: 12px;
+}
+
+.col_210 ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 33px;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+.col_329 {
+    width: 329px;
+}
+
+
+.col_221 {
+    width: 221px;
+    border-right: 1px solid #ccc;
+}
+
+
+.col_219 {
+    width: 219px;
+}
+
+
+.bb {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
 
 
 
