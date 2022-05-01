@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        div[class="box"] {
+            width: 300px;
+            /* 大小可调both, 不可调none */
+            resize: both;
+            overflow: auto;
+            border: 2px solid #ccc;
+        }
+
+        div[class="box1"] {
+            /* 盒子内容不改变盒子大小 */
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            /* Firefox */
+            width: 50%;
+            float: left;
+        }
+
+        div[class="box2"] {
+            /* 边框线 */
+            border: 2px solid black;
+
+            /* 附加边框线,一般用在input */
+            outline: 2px solid red;
+            outline-offset: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">调整属性指定一个元素是否由用户可调整大小的。</div>
+    <div class="box1"></div>
+    <div class="box2">这个 div有一个轮廓边界15 px边境外的边缘。</div>
+</body>
+
+</html>

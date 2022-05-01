@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>两面反转盒子</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body {
+            perspective: 400px;
+        }
+
+        .box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 300px auto;
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+
+
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid slategray;
+            text-align: center;
+            line-height: 300px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .front {
+            background-color: red;
+            transform: translateZ(1px)
+        }
+
+        .back {
+            background-color: yellow;
+            /* 记得给个Z轴的厚度 */
+            transform: rotateY(180deg) translateZ(1px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="front">程序员</div>
+        <div class="back">民工</div>
+    </div>
+</body>
+
+</html>

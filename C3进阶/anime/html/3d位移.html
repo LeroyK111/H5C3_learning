@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d位移</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body {
+            /* 父元素加个透视，模拟视距距离 */
+            perspective: 200px;
+            /* 近大远小 */
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            animation: identifier 3s linear forwards;
+        }
+
+        @keyframes identifier {
+
+            /* 显示不出来是因为没有加透视 */
+            0% {
+                transform: translate3d(0);
+            }
+
+            100% {
+                transform: translate3d(400px, 100px, 100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

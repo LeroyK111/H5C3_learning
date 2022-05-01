@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这里很明显</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body {
+            /* 加个透视 */
+            perspective: 300px;
+        }
+
+        img {
+            display: block;
+            margin: 100px auto;
+            transition: all 3s;
+        }
+
+        img:hover {
+            /* 沿着x轴旋转,正方向（左手准则，大拇指朝向轴正方向，手抓轴四指指向旋转正方向） */
+            /* transform: rotateX(360deg); */
+            /* transform: rotateY(360deg); */
+            /* transform: rotateZ(180deg); */
+            /* xyz是矢量轴坐标，可以自定义旋转轴 */
+            transform: rotate3d(1, 1, 1, 180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../media/pig.jpg" alt="">
+</body>
+
+</html>

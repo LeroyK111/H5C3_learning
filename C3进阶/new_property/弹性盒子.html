@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            /* 设置文本方向 */
+            /* direction: rtl; */
+        }
+
+        .flex-container {
+            /* 定义弹性容器父盒子 */
+            display: -webkit-flex;
+            display: flex;
+            /* 定义子盒子的排列方式(只有正向or反向，不能直接设置方向) */
+            -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+            /* 确定盒子分布 */
+            -webkit-justify-content: center;
+            justify-content: center;
+            /* 竖直方向对齐 */
+            -webkit-align-items: stretch;
+            align-items: stretch;
+            /* 子元素换行方式 */
+            -webkit-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            /* 设置各个行对齐 */
+            -webkit-align-content: center;
+            align-content: center;
+
+            width: 400px;
+            height: 250px;
+            background-color: lightgrey;
+        }
+
+        .flex-item {
+            /* 用整数值来定义排列顺序，数值小的排在前面。可以为负值。 */
+            order: -1;
+            background-color: cornflowerblue;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            /* 侧轴对齐 */
+            -webkit-align-self: flex-start;
+            align-self: flex-start;
+
+            /* 分配占比 */
+            -webkit-flex: 2;
+            flex: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="flex-container">
+        <div class="flex-item">flex item 1</div>
+        <div class="flex-item">flex item 2</div>
+        <div class="flex-item">flex item 3</div>
+    </div>
+
+</body>
+
+</html>

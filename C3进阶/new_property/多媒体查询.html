@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多媒体查询</title>
+    <!-- 根据筛选条件，选择链接的css -->
+    <!-- <link rel="stylesheet" media="多媒体类型 and|not|only (判断条件)" href="print.css"> -->
+    <!-- 
+        all	用于所有多媒体类型设备
+        print	用于打印机
+        screen	用于电脑屏幕，平板，智能手机等。
+        speech	用于屏幕阅读器 
+    -->
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        /* 对客户端进行查询，并且修改某些盒子的样式 */
+        @media screen and (max-width: 1920px) {
+
+            /* 如果屏幕小于1080 */
+            body {
+                background-color: skyblue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

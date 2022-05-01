@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(https://www.runoob.com/css3/css-grid.html)</title>
+    <style>
+        .grid-container {
+            /* 转变网格元素 */
+            display: grid;
+            /* display: inline-grid; */
+            /* 定义列的数量和宽度 */
+            /* grid-template-columns: auto auto auto auto; */
+            /* 设置行的数量，行高 */
+            /* grid-template-rows: 100px 300px; */
+            /* 网格列间距 */
+            /* grid-column-gap: 50px; */
+            /* 网格行间距,行列间距缩写grid-gap */
+            /* grid-row-gap: 50px; */
+            /* 设置书写方式 */
+            /* grid-row-start: 1;
+            grid-row-end: 3; 
+            grid-column-start: 1;
+            grid-column-end: 3;*/
+            /* 对齐方式 */
+            /* justify-content: space-evenly;
+             */
+            /* 竖直方向对齐方式 */
+            /* align-content: center; */
+            /* 网格元素列行的开始和结束位置 */
+            /* grid-column: 1 / 5; */
+            /* grid-row: 1 / 4 */
+            /* 简写开始结束 */
+            /* grid-area:1 / 2 / 5 / 6 */
+            /* 用名称指代网格元素 */
+            /* grid-area: myArea; */
+            /* grid-template-areas: 'myArea myArea myArea myArea myArea'; */
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>display: grid</h1>
+
+    <p>使用 display: grid; 来设置网格容器的块级元素。</p>
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+
+</body>
+
+</html>
