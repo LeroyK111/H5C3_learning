@@ -22,6 +22,28 @@
             /* 可以是数字，可以公式，可以是关键字 */
             background-color: green;
         }
+
+        .box1,
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box1:hover+p {
+            /* 临下选择器 */
+            background-color: skyblue;
+        }
+
+        .text {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box1:hover~.text {
+            background-color: black;
+        }
     </style>
 </head>
 
@@ -38,6 +60,16 @@
         <li>第9个</li>
         <li>第10个</li>
     </ul>
+    <br>
+    <p>上p标签</p>
+    <div class="box1">
+        你好
+        <div class="box2">世界</div>
+    </div>
+    <p>下p标签</p>
+    <br>
+    <div class="text">最近的div标签</div>
+    <div class="text">最近的div标签</div>
 </body>
 
 </html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变</title>
+    <link rel="stylesheet" href="../new_property/index.css">
+    <style>
+        div {
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box1 {
+            background: -webkit-linear-gradient(red, blue);
+            background: linear-gradient(red, blue);
+        }
+
+
+        .box2 {
+            /* 从左边到右边 */
+            background: -webkit-linear-gradient(left, red, blue);
+            /* 从右边到左边 */
+            background: linear-gradient(to left, red, blue);
+        }
+
+        .box3 {
+            /* 从左上开始 */
+            background: -webkit-linear-gradient(left top, red, blue);
+            /* 到左上结束 */
+            background: linear-gradient(to left top, red, blue);
+        }
+
+        .box4 {
+            /* 角度出发 */
+            background: -webkit-linear-gradient(135deg, red, blue);
+            /* 角度结束 */
+            background: linear-gradient(135deg, red, blue);
+        }
+
+        .box5 {
+            /* 角度出发 */
+            background: -webkit-linear-gradient(135deg, red, blue, green);
+            /* 角度结束，#fff与rgba也可以充当节点 */
+            background: linear-gradient(135deg, red, blue, green);
+        }
+
+        .box6 {
+            /* 径向渐变 */
+            background: radial-gradient(yellow, red);
+        }
+
+        .box7 {
+            /* 选一种颜色扩散方式+中心相对位置 */
+            background: radial-gradient(circle at 50px 50px, yellow, red);
+        }
+
+        .box8 {
+            /* 设置渐变终点,有四种 */
+            background: radial-gradient(closest-side circle at 50px 50px, yellow, red);
+        }
+
+        .box9 {
+            /* 给渐变颜色加入比例节点 */
+            background: radial-gradient(closest-side circle at 50px 50px, yellow 50%, red 70%, green);
+        }
+
+
+        .box10 {
+            /* 椭圆形渐变 */
+            background: radial-gradient(50px 100px ellipse, yellow 50%, red 70%, green);
+        }
+
+        .box11 {
+            /* 多重线性变色 */
+            background: repeating-linear-gradient(red, yellow 10%, green 20%)
+        }
+
+        .box12 {
+            /* 多重径向变色 */
+            background: repeating-radial-gradient(red, yellow 10%, green 20%)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+    <div class="box9"></div>
+    <div class="box10"></div>
+    <div class="box11"></div>
+    <div class="box12"></div>
+</body>
+
+</html>

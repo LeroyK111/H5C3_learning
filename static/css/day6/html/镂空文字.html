@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>镂空文字</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        .step {
+            font-size: 50px;
+            font-weight: bold;
+            /* 文本字符间距 */
+            letter-spacing: 2px;
+            color: transparent;
+
+            /* 为文字添加描边效果 */
+            -webkit-text-stroke: 2px #45b832;
+        }
+
+        .step2 {
+            /* 换行仅适合英文句式 */
+            word-break: normal;
+        }
+
+        .step3 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="step">世界最强</div>
+    <div class="step2">alskdjf lk-jsl kfj-ads lkfjk- lsdajkfl -dsjk lfjdklsfjklsflkj dfkl asjl kdj
+        asdkjfklasdjfkljsdklafjkladsjfkdalk</div>
+    <div class="step3">this a alskdjflkjslkfjadslkfjklsdajkfldsjklfjdklsfjklsflkjdfklasjlkdj woo w ojoiua lkasjdfl
+        anime
+    </div>
+</body>
+
+</html>

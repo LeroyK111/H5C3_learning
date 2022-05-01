@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器2联动开关</title>
+    <link rel="stylesheet" href="//HTML+CSS/C3进阶/new_property/index.css">
+    <style>
+        .btn-wrap {
+            text-align: center;
+
+        }
+
+        .btn-wrap input {
+            /* display: none; */
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background-color: #f9f8f6;
+            border-radius: 50%;
+            box-shadow: 0 5px 10px #333, 0 15px 20px 0px #ccc;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+
+            width: 22.7px;
+            height: 22.7px;
+            border-radius: 50%;
+            background-color: #ff9900;
+            display: inline-block;
+            box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #f9f8f6;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn::after {
+            content: "";
+            position: absolute;
+            display: inline-block;
+            left: 50%;
+            top: 35%;
+            width: 4px;
+            height: 12px;
+            background-color: #ccc;
+            box-shadow: 0 0 0 2.5px #f9f8f6;
+            transform: translate(-50%, -50%);
+        }
+
+        #input1:checked~.btn {
+            box-shadow: 0 2px 5px 0px gray, 0 15px 20px 0 transparent;
+        }
+
+        #input1:checked~.btn::before {
+            box-shadow: inset 0 0 0 5px orange, inset 0 0 0 14px #f9f8f6;
+        }
+
+        #input1:checked~.btn::after {
+            background-color: #ff9900;
+        }
+
+        .btn,
+        .btn::before,
+        .btn::after {
+            transition: all .3s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <a href="#div1">点我链接到div1</a>
+    <a href="#div2">点我链接到div2</a>
+    <div class="" id="div1">我是div1</div>
+    <div class="" id="div2">我是div2</div>
+    <div class="btn-wrap">
+        <input type="checkbox" name="" id="input1">
+        <!-- 这里用label和checkbox做了一个联动开关 -->
+        <!-- input和label就是伴随用法 -->
+        <label for="input1" class="btn"></label>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <style>
+        body {
+            /* 透视距离 */
+            perspective: 600px;
+            /* 透视中心 */
+            perspective-origin: 25% 75%;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all 3s;
+            /* 使后面元素不可见 */
+            backface-visibility: hidden;
+        }
+
+        div:hover {
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div><a
+            href="https://www.zhangxinxu.com/wordpress/2012/09/css3-3d-transform-perspective-animate-transition/">3d矩阵详解</a>
+    </div>
+
+</body>
+
+</html>

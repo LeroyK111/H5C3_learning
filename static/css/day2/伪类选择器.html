@@ -33,6 +33,33 @@
             color: yellowgreen;
             background-color: red;
         }
+
+        div[class^='box'] {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+
+
+        #div1 {
+            background-color: orange;
+        }
+
+        #div2 {
+            background-color: green;
+        }
+
+        #div1:target {
+            opacity: 1;
+        }
+
+        #div2:target {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -42,6 +69,12 @@
     <div class="text3"><a href="#" style="text-decoration: none;">鼠标经过的链接</a></div>
     <div class="text4"><a href="#" style="text-decoration: none;">长点的链接</a></div>
     <input type="text" value="字体变色">
+    <br>
+    <a href="#div1">选项卡1</a>
+    <a href="#div2">选项卡2</a>
+
+    <div id="div1" class="box1">选项卡1</div>
+    <div id="div2" class="box2">选项卡2</div>
 </body>
 
 </html>

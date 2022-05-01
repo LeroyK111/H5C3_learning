@@ -12,41 +12,73 @@
             /* 定义弹性容器父盒子 */
             display: -webkit-flex;
             display: flex;
-            /* 定义子盒子的排列方式(只有正向or反向，不能直接设置方向) */
-            -webkit-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+
+            /* 指定主轴方向(只有正向or反向，不能直接设置方向) 子盒子可以伸缩大小 */
+            /* -webkit-flex-direction: row-reverse; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: row; */
+            /* flex-direction: column;
+            flex-direction: column-reverse; */
+
             /* 确定盒子分布 */
-            -webkit-justify-content: center;
-            justify-content: center;
+            /* -webkit-justify-content: center; */
+            /* justify-content: center; */
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+
+
             /* 竖直方向对齐 */
-            -webkit-align-items: stretch;
-            align-items: stretch;
+            /* -webkit-align-items: stretch; */
+            /* align-items: stretch; */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* align-items: baseline; */
+
+
+
+
             /* 子元素换行方式 */
-            -webkit-flex-wrap: nowrap;
-            flex-wrap: nowrap;
+            /* -webkit-flex-wrap: nowrap; */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
             /* 设置各个行对齐 */
-            -webkit-align-content: center;
-            align-content: center;
+            /* -webkit-align-content: center;
+            align-content: center; */
+            /* align-content: flex-start; */
+            /* align-content: flex-end; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
 
             width: 400px;
-            height: 250px;
+            height: 450px;
             background-color: lightgrey;
         }
 
         .flex-item {
-            /* 用整数值来定义排列顺序，数值小的排在前面。可以为负值。 */
+            /* 用整数值来定义排列顺序，数值小的排在前面。可以为负值。给子元素赋权限 */
             order: -1;
             background-color: cornflowerblue;
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             margin: 10px;
-            /* 侧轴对齐 */
-            -webkit-align-self: flex-start;
-            align-self: flex-start;
+            border-radius: 50%;
+            text-align: center;
+
+            /* 子元素侧轴对齐 */
+            /* -webkit-align-self: flex-start;
+            align-self: flex-start; */
+            /* align-self: flex-end; */
+            /* align-self: baseline; */
+            /* align-self: stretch; */
 
             /* 分配占比 */
-            -webkit-flex: 2;
-            flex: 2;
+            /* -webkit-flex: 2;
+            flex: 2; */
         }
     </style>
 </head>
@@ -57,6 +89,9 @@
         <div class="flex-item">flex item 1</div>
         <div class="flex-item">flex item 2</div>
         <div class="flex-item">flex item 3</div>
+        <div class="flex-item">flex item 4</div>
+        <div class="flex-item">flex item 5</div>
+        <div class="flex-item">flex item 6</div>
     </div>
 
 </body>
