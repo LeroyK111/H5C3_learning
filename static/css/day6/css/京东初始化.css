@@ -18,12 +18,12 @@ li {
 img {
     /* 图片无边框，且文字环绕居中 */
     border: 0;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 button {
     /* 鼠标变小手 */
-    cursor: pointer
+    cursor: pointer;
 }
 
 a {
