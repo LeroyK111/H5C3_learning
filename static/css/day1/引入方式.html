@@ -11,6 +11,14 @@
         div {
             color: red;
         }
+
+        /* 甚至可以引用赋值变量--name: */
+        span {
+            width: calc(var(--i) * 100px);
+            height: calc(var(--i) * 100px);
+            background-color: skyblue;
+            display: block;
+        }
     </style>
     <!-- 引入css -->
     <link rel="stylesheet" href="text.css">
@@ -22,6 +30,8 @@
     <a href="#">链接式</a><br>
     加入水平线hr，不常用
     <hr>
+    <!-- 这个方式可以赋值 -->
+    <span style="--i:1"></span>
 </body>
 
 </html>
