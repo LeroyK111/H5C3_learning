@@ -116,9 +116,27 @@
     <div class="w">
         <div class="main">
             <div class="focus">
-                <ul>
+                <!-- 左右侧按钮 -->
+                <a href="javascript:;" class="arrow-l">&lt;</a>
+                <a href="javascript:;" class="arrow-r">&gt;</a>
+
+                <ul id="focus_imgs">
                     <!-- 轮播图一般用li去做 -->
-                    <li><img src="../upload/focus1.png" alt=""></li>
+                    <li>
+                        <a href="#"><img src="../upload/focus1.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../upload/focus1.png" alt="" style="filter: blur(5px);"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../upload/focus1.png" alt="" style="filter: blur(10px);opacity: .7;"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../upload/focus1.png" alt="" style="filter: blur(20px);opacity: .9;"></a>
+                    </li>
+                </ul>
+                <!-- 进程点 -->
+                <ul id="focus_index">
                 </ul>
             </div>
             <div class="newsflash">
@@ -218,7 +236,6 @@
                         <li><a href="#">高端电器</a></li>
                     </ul>
                 </div>
-
             </div>
 
             <div class="box_bd">
@@ -431,5 +448,9 @@
         </div>
     </footer>
 </body>
-
+<!-- 多js之间相互调用时，再html要注意顺序 -->
+<!-- 动画 -->
+<script src="../js/anime.js"></script>
+<!-- 轮播图 -->
+<script src="../js/swiper.js"></script>
 </html>

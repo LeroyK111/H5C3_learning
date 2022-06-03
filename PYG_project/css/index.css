@@ -20,7 +20,77 @@
     width: 721px;
     height: 455px;
     float: left;
+    position: relative;
+    overflow: hidden;
 }
+
+#focus_imgs {
+    /* 放大宽度即可水平浮动 */
+    width: 500%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+#focus_imgs li {
+    float: left;
+}
+
+/* 圆形点索引 */
+#focus_index {
+    display: flex;
+    position: absolute;
+    bottom: 17px;
+    left: 160px;
+}
+
+
+#focus_index li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#focus_index li:nth-child(n+1) {
+    margin-right: 5px;
+}
+
+#focus_index li:hover {
+    background-color: orange;
+}
+
+/* 左右侧按钮 */
+
+
+
+.arrow-r, .arrow-l {
+    position: absolute;
+    display: none;
+    font-size: 30px;
+    font-weight: bold;
+    width: 40px;
+    height: 60px;
+    background-color: black;
+    opacity: .4;
+    text-align: center;
+    line-height: 60px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.arrow-l {
+    left: 0;
+}
+
+
+
+
+
 
 
 .newsflash {
