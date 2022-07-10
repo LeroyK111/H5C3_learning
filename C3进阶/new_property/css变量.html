@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 快捷键已经改变，需要输入html:5 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 自定一个变量，通常放在根伪类上 */
+      :root {
+        --main-bg-color: skyblue;
+      }
+
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: var(--main-bg-color);
+      }
+
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: rgba(var(--rgba));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">设置css变量方法</div>
+    <div class="box2" style="--rgba:0,0,0,.3">通过style传参</div>
+  </body>
+</html>
