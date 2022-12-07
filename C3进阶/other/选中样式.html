@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        padding: 15px;
+        color: #324b64;
+      }
+
+      .box > p {
+        padding: 10px;
+        background-color: #f5f6f9;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+      /* 选中样式 */
+      .box-custom::selection {
+        color: #ffffff;
+        background-color: #ff4c9f;
+      }
+
+      .noChoice {
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p class="box-default">
+        I'm fatfish, 6 years of programming experience, like front-end, writing
+        and making friends, looking forward to becoming good friends with you.
+      </p>
+      <p class="box-custom">
+        I'm fatfish, 6 years of programming experience, like front-end, writing
+        and making friends, looking forward to becoming good friends with you.
+      </p>
+      <p class="noChoice">我无法被选中</p>
+    </div>
+  </body>
+</html>

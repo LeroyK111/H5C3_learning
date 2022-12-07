@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        -webkit-overflow-scrolling: touch;
+      }
+      .box {
+        width: 375px;
+        overflow: scroll;
+      }
+      /* 隐藏滚动条 */
+      .box-hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-hide-scrollbar">
+      <div>
+        I'm fatfish, 6 years of programming experience, like front-end, writing
+        and making friends, looking forward to becoming good friends with you.
+      </div>
+    </div>
+  </body>
+</html>

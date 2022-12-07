@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鼠标光标颜色</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
+    .caret-color {
+      width: 300px;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 10px;
+      border: solid 1px #ffd476;
+      box-sizing: border-box;
+      background-color: transparent;
+      /* 输入状态边框 */
+      outline: none;
+      color: skyblue;
+      font-size: 14px;
+      font-weight: bold;
+      /* 光标颜色 */
+      caret-color: skyblue;
+    }
+
+    .caret-color::-webkit-input-placeholder {
+      color: #4f4c5f;
+      font-size: 14px;
+    }
+  </style>
+  <body>
+    <input type="text" class="caret-color" />
+  </body>
+</html>
