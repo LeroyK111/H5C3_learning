@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input:invalid {
+        /* :invalid不满足验证的伪类选择器 */
+        animation: shake 0.2s ease-in-out 0s 2;
+        box-shadow: 0 0 0.4em red;
+      }
+      @keyframes shake {
+        0% {
+          margin-left: 0rem;
+        }
+        25% {
+          margin-left: 0.5rem;
+        }
+        75% {
+          margin-left: -0.5rem;
+        }
+        100% {
+          margin-left: 0rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- pattern="[A-Za-z]*" 正则表达式验证，前端验证不推荐 -->
+    <input id="name" type="text" placeholder="Enter your name" pattern="[A-Za-z]*"/>
+  </body>
+</html>

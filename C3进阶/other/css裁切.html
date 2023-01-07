@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css裁切</title>
+    <style>
+      .bg {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(199, 62, 133, 0.9);
+        /* 裁切路径, 除了polygon多边形，还有circle圆形等 */
+        /* 这里使用的是svg填充规则 */
+        clip-path: polygon(
+          100% 0,
+          100% 50%,
+          0 100%,
+          0 50%
+        );
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: relative;background-color: skyblue;width: 700px;height: 400px;">
+      <div class="bg"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>输入范围伪类</title>
+    <style>
+      /* 仅适合input输入的范围伪类 */
+      input:in-range {
+        /* 允许范围 */
+        background-color: rgba(0, 255, 0, 0.25);
+      }
+      input:out-of-range {
+        /* 不允许范围 */
+        background-color: rgba(255, 0, 0, 0.25);
+      }
+
+      /* 去除箭头 */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="greed">规定范围是绿色</p>
+    <p class="red">超出规定范围是红色</p>
+    请输入数量: <input type="number" placeholder="1到99" max="99" min="0" />
+  </body>
+</html>

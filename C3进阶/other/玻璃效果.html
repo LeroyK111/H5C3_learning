@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>玻璃效果</title>
+    <style>
+
+      * {
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+      }
+
+      .father {
+        position: relative;
+      }
+      
+      .son {
+        position: absolute;
+      }
+
+
+      .glass-effect {
+        width: 400px;
+        height: 400px;
+        -webkit-backdrop-filter: blur(6.2px);
+        backdrop-filter: blur(6.2px);
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.24);
+      }
+
+    </style>
+  </head>
+  <body>
+    <a href="https://css.glass/">点我前往专用玻璃特效</a>
+    <div class="father">
+      <img
+        src="https://cdn.pixabay.com/photo/2018/08/12/15/29/hintersee-3601004_960_720.jpg"
+        alt=""
+        class="son"
+      />
+      <div class="glass-effect"></div>
+    </div>
+  </body>
+</html>
