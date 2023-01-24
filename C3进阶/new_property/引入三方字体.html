@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "MyWebFont";
+        src: url("webfont.eot"); /* IE9 Compat Modes */
+        src: url("webfont.eot?#iefix") format("embedded-opentype"),
+          /* IE6-IE8 */ url("webfont.woff2") format("woff2"),
+          /* Super Modern Browsers */ url("webfont.woff") format("woff"),
+          /* Pretty Modern Browsers */ url("webfont.ttf") format("truetype"),
+          /* Safari, Android, iOS */ url("webfont.svg#svgFontName")
+            format("svg"); /* Legacy iOS */
+      }
+
+      body {
+        font-family: "MyWebFont";
+      }
+    </style>
+  </head>
+  <body>
+    EOT(Embedded Open Type) 字体是微软设计用来在 Web 上使用的字体。
+
+    TTF（TrueTypeFont）是Apple公司和Microsoft公司共同推出的字体文件格式，随着windows的流行，已经变成最常用的一种字体文件表示方式。
+
+    OTF（OpenType Font）是 TTF 的升级版，而 OTF 是采用的是 PostScript曲线，支持 OpenType 高级特性的更高级字体。 
+
+    TTC全称是TrueType Collection，它是TrueType字体集成文件(.TTC文件)，是在一单独文件结构中包含多种字体，以便更有效地共享轮廓数据，当多种字体共享同一笔画时，TTC技术可有效地减小字体文件的大小。
+    
+    woff 开放字体格式是一种网页所采用的字体格式标准。此字体格式发展于 2009 年，现在正由万维网联盟的 Web 字体工作小组标准化，以求成为推荐标准。
+
+    WOFF2 标准在 WOFF1 的基础上，进一步优化了体积压缩，带宽需求更少，同时可以在移动设备上快速解压。
+
+    SVG (Scalable Vector Graphics font) 字体格式使用 SVG 的字体元素定义。
+  </body>
+</html>
