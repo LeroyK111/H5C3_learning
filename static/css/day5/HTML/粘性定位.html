@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>粘性定位</title>
     <style>
-        body {
-            height: 6000px;
-            width: 600px;
-            margin: auto;
-            background-color: pink;
-        }
+      body {
+        height: 6000px;
+        width: 600px;
+        margin: auto;
+        background-color: pink;
+      }
 
-        .nav {
-            /* 粘性定位 */
-            position: sticky;
-            top: 10px;
-            font-size: 16px;
-            width: 400px;
-            height: 40px;
-            margin: auto;
-            background-color: skyblue;
-        }
+      .nav {
+        /* 粘性定位 */
+        position: static;
+        /* 粘性定位需要相对位置 */
+        top: 10px;
+        font-size: 16px;
+        width: 400px;
+        height: 40px;
+        margin: auto;
+        background-color: skyblue;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nav">粘性定位</div>
-</body>
-
+    <p>
+      以浏览器的可视窗口为参照点移动元素（固定定位特点）
+      粘性定位占有原先的位置（相对定位特点） 必须添加 top、left、right、bottom
+      其中一个才有效 跟页面滚动搭配使用，兼容性较差IE不支持
+      粘性定位可以认为是相对定位和固定定位的混合
+    </p>
+  </body>
 </html>
