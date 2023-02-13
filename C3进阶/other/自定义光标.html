@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .custom-cursor {
+      display: flex;
+      height: 80vh;
+      align-items: center;
+      justify-content: center;
+      background: #f3f3f3;
+      padding: 0 10px;
+    }
+
+    .card {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #d29a5a;
+      margin-right: 10px;
+      color: #fff;
+      font-size: 1.4em;
+      text-align: center;
+    }
+
+    .card-image-cursor {
+      background-color: #d11a5a;
+      cursor: url("https://cdn-images-1.medium.com/fit/c/80/80/1*AmBIV4haXTWPO--EhE0Q1A.jpeg"),
+        auto;
+    }
+
+    .card-emoji-cursor {
+      background-color: #d29b22;
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='48' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"),
+        auto;
+    }
+  </style>
+  <body>
+    <div class="custom-cursor">
+      <div class="card">Default</div>
+
+      <div class="card card-image-cursor">Image</div>
+
+      <div class="card card-emoji-cursor">Emoji</div>
+    </div>
+  </body>
+</html>
