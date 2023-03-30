@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      form {
+        border: 1px solid;
+        width: 400px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form:focus-within {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+        background-color: beige;
+      }
+    </style>
+
+    <form>
+      <input type="text" id="ipt" placeholder="请输入..." />
+      <p>当我点击选中输入框时，立马触发css，</p>
+    </form>
+  </body>
+</html>
