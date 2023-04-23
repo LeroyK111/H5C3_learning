@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+input:required {
+  /* 必须的 */
+  border: 2px solid #f00;
+}
+
+input:optional {
+  /* 非必须的 */
+  border: 1px solid #ccc;
+}
+
+
+input::placeholder {
+  color: #f00;
+  font-style: italic;
+}
+  </style>
+</head>
+<body>
+  <input type="text" required>
+  <input type="text">
+  <input type="text" placeholder="我的样式">
+</body>
+</html>
