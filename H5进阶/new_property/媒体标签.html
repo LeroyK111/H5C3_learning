@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>多媒体标签</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css" />
     <style>
-        video {
-            height: 100%;
-        }
+      video {
+        height: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 对于chrome则开启静音播放即可自动播放 -->
-    <video src="video/text.mp4" controls muted loop autoplay poster="img/cacheimg.jpg"></video>
+    <video
+      src="video/text.mp4"
+      controls
+      muted
+      loop
+      autoplay
+      poster="img/cacheimg.jpg"
+    ></video>
     <!-- chrome也会自动静音,背景音最好用js启动 -->
     <audio src="audio/text.mp3" autoplay controls></audio>
-</body>
 
+    <!-- 给视频加入缩略图 -->
+    <video poster="img/cacheimg.jpg">
+      <source src="video/text.mp4" type="video/mp4" />
+    </video>
+  </body>
 </html>
