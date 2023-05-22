@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      video {
+        width: 250px;
+      }
+
+      video::cue {
+        /* 调整的是字幕样式 */
+        font-size: 1rem;
+        color: yellow;
+      }
+
+      video::backdrop {
+        /* 设置全屏背景色 */
+        background-color: gray;
+      }
+    </style>
+    <video
+      controls
+      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"
+    >
+      <!-- track字幕 -->
+      <track
+        default
+        kind="captions"
+        srclang="en"
+        src="https://interactive-examples.mdn.mozilla.net/media/examples/friday.vtt"
+      />
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </body>
+</html>
