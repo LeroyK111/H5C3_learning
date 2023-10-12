@@ -1,0 +1,263 @@
+/* 通用选择器 */
+div * {
+  background: fixed;
+}
+
+/* 元素选择器 */
+div {
+  background: fixed;
+}
+
+/* 类选择器 */
+.my-class {
+  background: fixed;
+}
+
+/* id选择器 */
+#my {
+  background-color: aliceblue;
+}
+
+/* 组合选择器，满足多个类名 */
+.my-class.spe {
+  background-color: aliceblue;
+}
+
+/* 多重选择器 */
+.my-class,
+.spe {
+  background-color: aliceblue;
+}
+
+/* 后代选择器 */
+.one .oneSon {
+  background-color: aliceblue;
+}
+
+/* 相邻选择器 */
+.item + div {
+  background-color: yellow;
+}
+
+/* 子选择器 */
+.father > div {
+  background-color: aliceblue;
+}
+
+/* 通用兄弟选择器 */
+.item ~ div {
+  background-color: aliceblue;
+}
+
+/* 猫头鹰选择器,选择所有具有前置兄弟元素的元素 */
+* div * {
+  nav-right: auto;
+}
+
+/* 属性选择器 */
+[data-text] {
+  background-color: aliceblue;
+}
+/* 来选择具有指定属性及属性值的元素： */
+[data-text="hello"] {
+  background-color: aliceblue;
+}
+/* 来选择具有指定属性，并且该属性的多个值中包含给定值的元素 */
+[data-text~="old"] {
+  background-color: aliceblue;
+}
+/*  来选择具有指定属性，并且该属性的值中包含特定部分值的元素*/
+[data-text*="old"] {
+  background-color: aliceblue;
+}
+/* 来选择具有指定属性，并且该属性的值以给定值开头的元素。 */
+[data-text^="old"] {
+  background-color: aliceblue;
+}
+/*  来选择具有指定属性，并且该属性的值以给定值结尾的元素。 */
+[data-text$="old"] {
+  background-color: aliceblue;
+}
+
+/* 伪类选取未被访问过的链接，用于为用户尚未点击的超链接设置样式。 */
+a:link {
+  background-color: aliceblue;
+}
+/* 选取已经被用户访问过的链接，用于为用户之前点击过的超链接设置样式。 */
+a:visited {
+  background-color: aliceblue;
+}
+/* 当用户指针（例如鼠标光标）悬停在某些元素（通常是链接）上时，选取这些元素。 */
+a:hover {
+  background-color: aliceblue;
+}
+/* 在元素（通常是链接或按钮）被激活时，例如用户点击它们的瞬间，选取这些元素。 */
+a:active {
+  background-color: aliceblue;
+}
+
+/* 伪类用于选择当前获得焦点的元素。当用户与网页上的表单元素进行交互时，可以通过点击或键盘导航，使某个特定的输入框处于焦点状态。这意味着用户的输入将直接应用到该输入框上。 */
+input:focus {
+  border-color: aliceblue;
+}
+
+/* 伪类用于选择当前被选中或选择的单选按钮、复选框或 select 元素的选项。 */
+input:checked {
+  all: unset;
+}
+
+/* 伪类用于匹配被禁用的表单元素，例如按钮或文本输入框。 */
+input:disabled {
+  all: unset;
+}
+/* 伪类用于匹配可以交互和接收输入的表单元素。 */
+input:enabled {
+  all: unset;
+}
+/*  伪类用于选择具有与其属性（如 pattern、type 等）所指定要求相匹配的内容的输入元素。 */
+input:valid {
+  background-color: aliceblue;
+}
+
+/* 不符合条件的伪类 */
+input[type="email"]:invalid {
+  background-color: aliceblue;
+}
+/* 伪类用于选择具有 required 属性的输入元素，该属性表示在提交表单之前必须填写它们。 */
+input:required {
+  background-color: aliceblue;
+}
+
+/* 伪类用于选择没有 required 属性的输入元素，这意味着它们不是必填项。 */
+input:optional {
+  background-color: aliceblue;
+}
+
+/* 伪类用于选择父元素中的第一个子元素。 */
+input:first-child {
+  background-color: aliceblue;
+}
+/* 伪类用于选择父元素中的最后一个子元素。 */
+input:last-child {
+  background-color: aliceblue;
+}
+
+/* 伪类根据元素在父元素中的位置进行选择，允许进行各种选择。:nth-child 还可以自定义模式选择元素： */
+input:nth-child(1) {
+  background-color: aliceblue;
+}
+
+/*  伪类与 :nth-child 类似，但是从最后一个子元素向后计数。 */
+input:nth-last-child(1) {
+  background-color: aliceblue;
+}
+
+/*  当需要选择在其父级元素中唯一的一个子元素时，可以使用 :only-child 伪类。 */
+input:only-child() {
+  background-color: aliceblue;
+}
+
+/*  伪类选择在其父元素中的特定类型的元素中的第一个元素。。 */
+input:first-of-type {
+  background-color: aliceblue;
+}
+
+/*   伪类选择在其父元素中的特定类型的元素中的最后一个元素。 */
+input:last-of-type {
+  background-color: aliceblue;
+}
+
+/*   当需要根据元素在兄弟元素中的类型和位置选择元素时， */
+input:nth-of-type(1) {
+  background-color: aliceblue;
+}
+/*   当需要根据元素在兄弟元素中的类型和位置选择元素，并且从末尾开始计数时， */
+input:nth-last-of-type(1) {
+  background-color: aliceblue;
+}
+
+/*  当需要选择在其兄弟元素中为特定类型的元素仅有一个的元素时， */
+input:only-of-type {
+  background-color: aliceblue;
+}
+
+/*  用于选择具有与 URL 片段匹配的 ID 属性的元素。 */
+input:target {
+  background-color: aliceblue;
+}
+
+/*  伪类可以选择不符合指定选择器或条件的元素。这在需要排除某些特定元素时非常有用。 */
+input:not(.exclude) {
+  background-color: aliceblue;
+}
+
+/*  伪类可以选择包含某个特定元素或选择器的父级元素，并为其应用样式。 */
+input:has(.exclude) {
+  background-color: aliceblue;
+}
+
+/* 
+:root：选择文档中最高级别的父元素，通常是HTML文档中的 <html> 元素。可用于定义对所有页面元素可用的CSS变量。
+
+:is()：匹配可以是多个选择器之一的元素，使得长的选择器列表更加简短和易读。例如，:is(h1, h2, h3) 会匹配这三个标题元素之一。
+
+:where()：与 :is() 类似，但允许根据条件选择元素，而不影响选择器的特异性。
+
+:default：匹配设置为默认选择状态的用户界面元素（如单选按钮或复选框）。
+
+:empty：选择没有子元素（包括文本节点）的元素。
+
+:fullscreen：选择当前以全屏模式显示的元素。
+
+:in-range：匹配值在指定范围内的表单元素（使用 min 和 max 属性指定范围）。
+
+:out-of-range：匹配值在指定范围之外的表单元素。
+
+:indeterminate：选择状态不确定的表单元素，例如既未选中也未取消选中的复选框（在树状结构中经常见到）。
+
+:read-only：匹配由于 readonly 属性而不可编辑的表单元素。
+
+:read-write：选择可由用户编辑的表单元素，意味着它们不是只读的。
+
+:lang()：根据元素的语言属性进行匹配。例如，:lang(en) 选择使用英语定义的元素。
+*/
+
+/* 伪元素 用于在元素的内容之前插入内容*/
+input::before {
+  content: "1";
+}
+/* 伪元素 用于在元素的内容之后插入内容*/
+input::after {
+  content: "1";
+}
+/* 伪元素用于选择并修改块级元素的第一个字母，从而应用特定的样式。*/
+input::first-letter {
+  background-color: aliceblue;
+}
+/* 伪元素用于选择并修改块级元素的第一行，从而应用特定的样式。*/
+input::first-line {
+  background-color: aliceblue;
+}
+/* 伪元素用于选择并修改表单字段的占位符文本，从而应用特定的样式。。*/
+input::placeholder {
+  background-color: aliceblue;
+}
+/* 伪元素用于选择并修改用户所选文本的样式。。*/
+input::selection {
+  background-color: aliceblue;
+}
+/*  伪元素用于为列表项中的标记符设置样式，这些标记符通常包含无序列表的项目符号或有序列表的数字/字母。*/
+input::marker {
+  background-color: aliceblue;
+}
+/* 
+
+::file-selector-button：用于选择文件的按钮元素的伪元素。它可以用来样式化文件上传控件中的选择按钮。
+
+::cue：用于样式化媒体元素（如音频或视频）中的字幕或注释的伪元素。可以用来设置字幕的样式，比如字体、颜色等。
+
+::part()：用于自定义 Web 组件的内部部件的伪元素。它可以针对组件的具体部分应用样式，并通过组件的 shadow DOM 提供的 Custom Elements API 进行访问。
+
+::slotted()：用于样式化插槽内容的伪元素。插槽是一种在 Web 组件中用于插入内容的机制，::slotted() 可以应用样式到被插入的内容，以实现更精确的样式控制。
+
+*/
