@@ -1,0 +1,53 @@
+/* 尺寸单位 */
+
+/* 绝对长度 */
+body {
+  font-size: 1cm;
+  font-size: 1mm;
+  /* 英寸 */
+  font-size: 1in;
+  /* 像素 */
+  font-size: 1px;
+  /* 点 */
+  font-size: 1pt;
+  /* 派卡 */
+  font-size: 1pc;
+}
+
+body {
+  /* 相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍） */
+  font-size: 1em;
+  /* 相对于当前字体的 x-height(极少使用) */
+  font-size: 1ex;
+  /* 相对于 "0"（零）的宽度 */
+  font-size: 1ch;
+  /* 相对于根元素的字体大小（font-size） */
+  font-size: 1rem;
+  /* 视口宽度 */
+  font-size: 1vw;
+  /* 视口高度 */
+  font-size: 1vh;
+  /* 视口较小尺寸的1% */
+  font-size: 1vmin;
+  /* 视口较大尺寸的1% */
+  font-size: 1vmax;
+
+  /* 相对于父元素的比列 */
+  font-size: 1%;
+}
+
+/* 移动端单位 */
+body {
+  /* 大视口单位 */
+  font-size: 1lvw, 1lvh, 1lvi, 1lvb, 1lvmin, 1lvmax;
+  /* 小视口单位 */
+  font-size: 1svw, 1svh, 1svi, 1svb, 1svmin, 1svmax;
+  /* 主流 动态视口单位 */
+  font-size: 1dvw, 1dvh, 1dvb, 1dvi, 1dvmin, 1dvmax;
+}
+
+div {
+  /* 查询容器宽度 */
+  font-size: 1cqw;
+  font-size: 1cqh;
+}

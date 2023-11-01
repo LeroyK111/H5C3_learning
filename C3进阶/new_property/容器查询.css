@@ -1,0 +1,17 @@
+
+/* 
+容器查询和媒体查询的相互判断，足够形成响应式界面。
+
+*/
+
+@container (max-width: 850px) {
+  .links {
+    display: none;
+  }
+
+  .time {
+    font-size: 1.25rem;
+  }
+
+  /* ... */
+}
