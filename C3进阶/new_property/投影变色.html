@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://segmentfault.com/a/1190000039393788"></a>
+    <img src="" alt="" srcset="" />
+  </body>
+  <style>
+    /* 投影变色 */
+    img {
+      animation: move 3s linear forwards;
+      /* 记得隐藏原图标 */
+      overflow: hidden;
+    }
+    @keyframes move {
+      0% {
+        filter: drop-shadow(0 0 #000);
+      }
+      100% {
+        filter: drop-shadow(150px 0 #000);
+      }
+    }
+  </style>
+</html>
