@@ -11,7 +11,7 @@
         /* 不可继承 */
         inherits: false;
         /* 默认值0 */
-        initial-value: 10;
+        initial-value: 0;
       }
 
       @keyframes min {
@@ -21,20 +21,39 @@
         }
       }
 
+      /* 存在兼容性问题 */
       .clock {
         /* 创建计数器 */
         counter-reset: minr var(--min);
-        animation: min 1s infinite steps(10, end);
+        animation: min 10s infinite steps(100, end);
+        /* 暂停 */
+        animation-play-state: paused;
       }
 
       .clock::before {
         /* 计数器 */
-        content: counter(minr);
+        content: counter(minr, decimal-leading-zero);
       }
+
+      /* 当复选框被选中 */
+      :checked~.clock {
+        animation-play-state: running;
+      }
+
+      .btn:active+.clock {
+        background-color: red;
+        /* 清楚动画效果 */
+        animation: none;
+      }
+
+
     </style>
   </head>
   <body>
+
+    <input type="checkbox" name="" id="start">
+    <label for="start" >启动</label>
+    <button class="btn">重置</button>
     <div class="clock"></div>
-    <div>click</div>
   </body>
 </html>
