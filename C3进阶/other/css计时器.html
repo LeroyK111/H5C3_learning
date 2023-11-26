@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @property --min {
+        /* 自定义属性，整数类型 */
+        syntax: "<integer>";
+        /* 不可继承 */
+        inherits: false;
+        /* 默认值0 */
+        initial-value: 10;
+      }
+
+      @keyframes min {
+        /* 通过动画，过度出来 */
+        to {
+          --min: 99;
+        }
+      }
+
+      .clock {
+        /* 创建计数器 */
+        counter-reset: minr var(--min);
+        animation: min 1s infinite steps(10, end);
+      }
+
+      .clock::before {
+        /* 计数器 */
+        content: counter(minr);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock"></div>
+    <div>click</div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      display: inline-block;
+      position: absolute;
+    }
+
+    .resize {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      /* background-color: red; */
+      resize: both;
+      overflow: hidden;
+      position: relative ;
+      z-index: 1;
+    }
+
+    .resize::-webkit-resizer {
+      /* 清除拖拽图标 */
+      background-color: transparent;
+    }
+
+    .son {
+      box-sizing: border-box;
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      position: absolute;
+      bottom: -190px;
+      right: -190px;
+      padding: 10px;
+      border-radius: 10px;
+
+      &::after {
+        content: "";
+        background-color: red;
+        position: absolute;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    
+
+    
+
+    
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="resize"></div>
+    <div class="son" contenteditable="true">
+      评论内容可以修改
+    </div>
+  </div>
+</body>
+</html>
