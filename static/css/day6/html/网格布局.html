@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* CSS 网格提供了多个属性来对齐网格布局中的网格项。您可以使用 justify-items 属性水平对齐项目，使用align-items 属性垂直对齐项目。此外，您可以使用 justify-self 和align-self 属性来对齐各个网格项。 */
+
+      /* 要使用 CSS Grid 创建网格布局，您需要定义网格容器并指定所需的行数和列数。您可以使用 grid-template-rows 和 grid-template-columns 属性来设置网格轨道的大小。 */
+
+      /* fr 单位是“fraction”的缩写，是 CSS Grid 中的一个灵活单位，用于在网格轨道内分配可用空间。 */
+
+      /* CSS 网格允许您通过将 display: grid 属性应用于现有网格布局中的网格项来创建嵌套网格。这允许您创建更复杂和分层的网格结构。 */
+
+      /* CSS 网格可用于创建砖石布局，其中网格项根据可用垂直空间定位，从而产生视觉上吸引人的动态布局。通过将 grid-auto-rows 属性设置为 minmax(100px, auto)，网格将自动调整每行的高度。 */
+
+      /* CSS 网格允许您使用 order 属性控制网格项目的顺序。默认情况下，网格项目的顺序值为 0。您可以修改顺序值以更改项目在网格内的位置。 */
+      .container {
+        display: grid;
+        grid-template-rows: 100px 200px;
+        grid-template-columns: 1fr 2fr;
+        justify-items: center;
+        align-items: center;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: minmax(100px, auto);
+      }
+
+      .item {
+        justify-self: end;
+        align-self: start;
+        order: 1;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
