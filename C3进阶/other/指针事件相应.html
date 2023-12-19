@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p class="first">
+        Please <a href="https://shefali.dev/blog">Click here</a>
+      </p>
+      <p class="second">
+        Please <a href="https://shefali.dev/blog">Click here</a>
+      </p>
+    </div>
+    <style>
+      .first {
+        pointer-events: none;
+        /*here all the pointer events will be set to none. So the user can't 
+click on the link.*/
+      }
+      .second {
+        pointer-events: auto;
+      }
+    </style>
+  </body>
+</html>

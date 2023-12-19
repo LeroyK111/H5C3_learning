@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>vertical-align对齐</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index.css" />
     <style>
-        img {
-            /* vertical-align: bottom; */
-            vertical-align: middle;
-            /* vertical-align: top; */
-        }
+      img {
+        /* vertical-align: bottom; */
+        vertical-align: middle;
+        /* vertical-align: top; */
+      }
 
-        textarea {
-            resize: none;
-            vertical-align: middle;
-        }
+      textarea {
+        resize: none;
+        vertical-align: middle;
+      }
 
-        .text,
-        .text>img {
-            /* 默认有间隙边距，通过修改vertical-align改变 */
-            vertical-align: baseline;
-            border: 1px solid red;
-        }
+      .text,
+      .text > img {
+        /* 默认有间隙边距，通过修改vertical-align改变 */
+        vertical-align: baseline;
+        border: 1px solid red;
+      }
+
+      h2 {
+        /* 对齐方式 */
+        text-align: justify;
+        text-justify: inter-character;
+        /*Other values: auto, inter-word, inter-character, none, initial, inherit*/
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <img src="../img/LDH.jpg" alt=""> pink老师是刘德华
-    <br>
+  <body>
+    <img src="../img/LDH.jpg" alt="" /> pink老师是刘德华
+    <br />
     <textarea name="" id="" cols="30" rows="10"></textarea> 请你留言
     <div class="text">
-        <!-- 出现空隙 -->
-        <img src="../img/LDH.jpg" alt="">pink老师
+      <!-- 出现空隙 -->
+      <img src="../img/LDH.jpg" alt="" />pink老师
     </div>
-</body>
-
+  </body>
 </html>
