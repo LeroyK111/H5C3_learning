@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- sizes = 'auto' 自动调整属性 -->
+    <img
+      loading="lazy"
+      sizes="auto"
+      srcset="
+        https://o.img.rodeo/w_1200,h_1200,b_tomato/t_WxH/_.png    1200w,
+        https://o.img.rodeo/w_900,h_900,b_goldenrod/t_WxH/_.png    900w,
+        https://o.img.rodeo/w_600,h_600,b_forestgreen/t_WxH/_.png  600w,
+        https://o.img.rodeo/w_300,h_300,b_dodgerblue/t_WxH/_.png   300w
+      "
+      src="https://o.img.rodeo/w_300,h_300,b_forestgreen/t_WxH/_.png"
+      alt="An example image that reports its natural dimensions"
+    />
+  </body>
+</html>
