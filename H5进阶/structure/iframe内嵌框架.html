@@ -25,6 +25,40 @@
   </head>
 
   <body>
-    <iframe src="canvas绘图.html" width="900" height="500" frameborder="0" scrolling="no"></iframe>
+    <!-- 嵌入页面 -->
+    <iframe
+      class="iframe-page"
+      src="canvas绘图.html"
+      frameborder="0"
+      scrolling="no"
+    ></iframe>
+
+    <!-- embed -->
+    <embed type="text/x-scriptlet" src="canvas绘图.html" width="640" height="480">
+
+    <!-- object标签，兼容性较差 -->
+    <object
+      class="inline-page"
+      type="text/x-scriptlet"
+      data="canvas绘图.html"
+    />
+
+
+
   </body>
+
+  <style>
+    body {
+      display: flex;
+    }
+
+    .iframe-page {
+      width: 100px;
+      height: 100px;
+    }
+    .inline-page {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
 </html>
