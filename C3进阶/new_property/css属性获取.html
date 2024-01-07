@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<span id="counter" data-value="1"></span>
+
+<textarea class="resize">1111</textarea>
+
+
+
+
+<style>
+#counter::after {
+  content: attr(data-value);
+}
+
+
+.resize{
+  background-color: aqua;
+  resize: both;
+}
+
+</style>
+
+</body>
+</html>

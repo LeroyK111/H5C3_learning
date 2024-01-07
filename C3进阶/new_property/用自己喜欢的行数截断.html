@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        /* 但是不限制使用宽度属性。还可以根据自己喜欢的行数截断长文本。为此，需要以下 CSS 属性。 */
+        -webkit-line-clamp: 10; /* change line numbers */
+        overflow: hidden;
+
+        font-size: 1.5rem;
+      }
+    </style>
+  </body>
+</html>

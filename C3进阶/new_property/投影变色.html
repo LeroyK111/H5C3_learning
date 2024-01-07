@@ -17,6 +17,7 @@
       overflow: hidden;
     }
     @keyframes move {
+      /* 使用带有 drop-shadow() CSS 函数的过滤器 CSS 属性而不是 box-shadow，则可以仅向 PNG 中的实际图像部分添加阴影，而不包括透明背景。 */
       0% {
         filter: drop-shadow(0 0 #000);
       }
