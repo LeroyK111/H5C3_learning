@@ -9,6 +9,7 @@
       http-equiv="Content-Security-Policy"
       content="frame-ancestors 'self'"
     />
+    
 
     <title>Document</title>
     <style>
@@ -42,6 +43,31 @@
       type="text/x-scriptlet"
       data="canvas绘图.html"
     />
+
+
+      
+
+    
+      <!-- 我们着重讲解iframe 主流用法 -->
+      <iframe src="">
+        allow： 同源策略
+        allowfullscreen： 全屏？
+        src: url
+        allowpaymentrequest: 支付接口
+        csp: 内容安全策略
+        height: 高度
+        importance: 资源加载优先级,默认auto
+        name: 命名空间
+        referrerpolicy: unsafe-url 发送完整信息？
+        sandbox: 限制操作？默认无限制
+        srcdoc: 一段HTML代码
+        width: 宽度
+
+        <!-- 其他属性都已经移除 如frameborder边框 -->
+      </iframe>
+
+
+   
 
 
 
