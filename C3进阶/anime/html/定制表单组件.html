@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <from type="text" class="custom-input">
+      <!-- :focus-within CSS 伪类表示当元素或其任意后代元素被聚焦时，将匹配该元素。换言之，它表示 :focus 伪类匹配到该元素自身或它的后代时，该伪类生效 -->
+      <input type="text">
+    </from>
+    <style>
+      :root {
+        --input-border: #ccc;
+        --input-border-focused: #007bff;
+      }
+      .custom-input {
+        border: 2px solid var(--input-border);
+      }
+      .custom-input:focus-within {
+        border: 2px solid var(--input-border-focused);
+      }
+    </style>
+  </body>
+</html>

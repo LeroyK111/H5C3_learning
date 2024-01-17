@@ -103,6 +103,22 @@
 
         font-size: 5rem;
       }
+
+      /* 圆锥梯度渐变 */
+
+      .gradient-border {
+        border: 5px solid;
+        border-image: conic-gradient(
+          from 0deg at 50% 50%,
+          red,
+          yellow,
+          green,
+          blue,
+          purple
+        );
+        border-image-slice: 1;
+      }
+      
     </style>
   </head>
 
