@@ -1,0 +1,645 @@
+22.隐藏的辅助文本
+
+使用类 sr-only 在视觉上隐藏元素，但让屏幕阅读器可以访问它们。
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+23. 纵横比框
+
+使用填充技巧来保持图像或视频等元素的宽高比。
+
+.aspect-ratio-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* Adjust as needed */
+}
+
+.aspect-ratio-box > iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+24. 选择偶数和奇数元素
+
+使用 :nth-child 伪类设置替代元素的样式。
+
+li:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+li:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+25.CSS计数器
+
+使用计数器重置和计数器增量属性在列表中创建自动编号。
+
+ol {
+    counter-reset: item;
+}
+
+li {
+    counter-increment: item;
+}
+li::before {
+    content: counter(item) ". ";
+}
+26. 多个背景图像
+
+将多个背景图像应用于具有不同属性的元素。
+
+.bg {
+    background-image: url('image1.jpg'), url('image2.jpg');
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, repeat-x;
+}
+27. 连字符让文本更流畅
+
+通过允许使用 hyphens 属性自动连字符来提高文本可读性。
+
+p {
+    hyphens: auto;
+}
+28.动态样式的CSS变量
+
+利用 CSS 变量创建动态且可重用的样式。
+
+:root {
+    --main-color: #3498db;
+}
+
+.element {
+    color: var(--main-color);
+}
+29.键盘导航的焦点样式
+
+改进焦点样式以获得更好的键盘导航和可访问性。
+
+:focus {
+    outline: 2px solid #27ae60;
+}
+30.平滑渐变过渡
+
+对渐变背景应用平滑过渡以获得精美效果。
+
+.gradient-box {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    transition: background 0.5s ease;
+}
+
+.gradient-box:hover {
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+}
+31.文字描边效果
+
+为文本添加笔划（轮廓）以获得独特的视觉效果。
+
+h1 {
+    color: #3498db;
+    -webkit-text-stroke: 2px #2c3e50;
+}
+32.纯CSS汉堡菜单
+
+无需 JavaScript 创建一个简单的汉堡菜单。
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle:checked + nav {
+    display: block;
+}
+/* Add styles for the hamburger icon and menu here */
+33. CSS :is() 选择器
+
+使用 :is() 伪类简化复杂的选择器。
+
+:is(h1, h2, h3) {
+    color: blue;
+}
+34.CSS变量的计算
+
+在动态样式的 CSS 变量中执行计算。
+
+:root {
+    --base-size: 16px;
+    --header-size: calc(var(--base-size) * 2);
+}
+
+h1 {
+    font-size: var(--header-size);
+}
+35. 内容的 attr() 函数
+
+使用 attr() 函数检索和显示属性值。
+
+div::before {
+    content: attr(data-custom-content);
+}
+36. CSS 屏蔽
+
+对图像应用遮罩以获得创意效果。
+
+.masked-image {
+    mask: url(mask.svg);
+    mask-size: cover;
+}
+37. 混合模式
+
+尝试混合模式以获得有趣的色彩效果。
+
+.blend-mode {
+    background: url(image.jpg);
+    mix-blend-mode: screen;
+}
+38. 纵横比属性
+
+使用宽高比属性简化宽高比框的创建。
+
+.aspect-ratio-box {
+    aspect-ratio: 16/9;
+}
+39. 用于文本换行的 shape-outside
+
+使用 shape-outside 属性使文本环绕指定形状，从而实现更动态的布局。
+
+.shape-wrap {
+    float: left;
+    width: 150px;
+    height: 150px;
+    shape-outside: circle(50%);
+}
+40. ch 单位用于一致的尺寸
+
+ch 单位表示所选字体中字符“0”的宽度。 它对于创建一致且响应式的布局很有用。
+
+h1 {
+    font-size: 2ch;
+}
+41. ::marker伪元素
+
+使用 ::marker 伪元素设置列表项标记的样式。
+
+li::marker {
+    color: blue;
+}
+42. 背景的 element() 函数
+
+使用 element() 函数动态引用元素作为背景。
+
+.background {
+    background: element(#targetElement);
+}
+43. 使用 Flexbox 的粘性页脚
+
+使用 Flexbox 创建粘性页脚布局。
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+44.scroll-padding实现平滑滚动
+
+通过调整滚动填充来改进滚动行为。
+
+html {
+    scroll-padding: 20px;
+}
+45.交互式高亮效果
+
+使用 CSS 变量创建交互式突出显示效果。
+
+.highlight {
+    --highlight-color: #e74c3c;
+    background-image: linear-gradient(transparent 0%, var(--highlight-color) 0%);
+    background-size: 100% 200%;
+    transition: background-position 0.3s;
+}
+
+.highlight:hover {
+    background-position: 0 100%;
+}
+46. 自定义单选按钮和复选框
+
+设置不带图像的单选按钮和复选框的样式。
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #3498db;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #e74c3c;
+}
+47. 调整文本区域的属性大小
+
+使用 resize 属性控制文本区域的大小调整行为。
+
+textarea {
+    resize: vertical;
+}
+48. 文字渐变
+
+使用background-clip 和text-fill-color 属性为文本创建渐变效果。
+
+.gradient-text {
+    background-image: linear-gradient(45deg, #3498db, #2ecc71);
+    background-clip: text;
+    color: transparent;
+}
+49. 长单词的断字属性
+
+使用 word-break 属性可以控制不带空格的单词或字符串的长度。
+
+.long-words {
+    word-break: break-all;
+}
+50. 可变字体的 font-variation-settings
+
+使用 font-variation-settings 属性微调可变字体样式。
+
+.custom-font {
+    font-family: 'MyVariableFont';
+    font-variation-settings: 'wght' 600, 'ital' 1;
+}
+51. 用于创意叠加的混合混合模式
+
+使用 mix-blend-mode 将混合模式应用于元素，在叠加元素时创建有趣的视觉效果。
+
+.overlay {
+  mix-blend-mode: overlay;
+}
+52. 设计破损图像的样式
+
+使用 :broken 伪类将样式应用于损坏的图像。
+
+img:broken {
+  filter: grayscale(100%);
+}
+53. CSS 形状
+
+使用shape-outside 属性创建有趣的 CSS 形状设计。
+
+.shape {
+  shape-outside: circle(50%);
+}
+54.子串匹配的属性选择器
+
+使用属性选择器和 *= 运算符进行子字符串匹配。
+
+[data-attribute*="value"] {
+  /* Styles */
+}
+55. 模糊背景的背景滤镜
+
+使用背景滤镜对背景应用模糊效果，以获得磨砂玻璃效果。
+
+.element {
+  backdrop-filter: blur(10px);
+}
+56.CSS环境变量
+
+使用 env() 函数访问 CSS 中的环境变量。
+
+.element {
+  margin-top: env(safe-area-inset-top);
+}
+57.CSS属性计数器
+
+使用 :nth-child 选择器计算特定属性值的出现次数。
+
+[data-category="example"]:nth-child(3) {
+  /* Styles for the third occurrence */
+}
+58. 用于文本换行的 CSS 形状
+
+将 shape-outside 与 Polygon() 函数结合使用，可实现围绕不规则形状的精确文本环绕。
+
+.text-wrap {
+  shape-outside: polygon(0 0, 100% 0, 100% 100%);
+}
+59.自定义光标样式
+
+使用光标属性更改光标样式。
+
+.custom-cursor {
+  cursor: pointer;
+}
+60. 用于透明颜色的 HSLA
+
+使用透明颜色的 HSLA 值，提供对 Alpha 通道的更多控制。
+
+.transparent-bg {
+  background-color: hsla(120, 100%, 50%, 0.5);
+}
+61. 垂直文本的文本方向
+
+使用文本方向属性垂直旋转文本。
+
+.vertical-text {
+  text-orientation: upright;
+}
+62. 小型大写字母的字体变体
+
+使用 font-variant 属性将小型大写字母应用于文本。
+
+.small-caps {
+  font-variant: small-caps;
+}
+63. 背景分割的 box-decoration-break
+
+使用 box-decoration-break 控制跨多行的元素的背景。
+
+.split-background {
+  box-decoration-break: clone;
+}
+64. :focus-visible 用于特定焦点样式
+
+仅当元素处于焦点且焦点不是通过鼠标单击提供时才应用样式。
+
+input:focus-visible {
+  outline: 2px solid blue;
+}
+65. 最佳字体渲染的文本渲染
+
+使用文本渲染属性改进文本渲染。
+
+.optimized-text {
+  text-rendering: optimizeLegibility;
+}
+66. 首字母大写字母
+
+使用initial-letter 设置块级元素的第一个字母的样式。
+
+p::first-letter {
+  font-size: 2em;
+}
+67. overscroll-behavior 滚动超调
+
+控制用户滚动超过滚动容器边界时的行为。
+
+.scroll-container {
+  overscroll-behavior: contain;
+}
+68. 垂直布局的写作模式
+
+使用writing-mode 属性创建垂直布局。
+
+.vertical-layout {
+  writing-mode: vertical-rl;
+}
+69. ::cue 用于设置 HTML5 标题样式
+
+使用 ::cue 伪元素设置 HTML5 标题文本的样式。
+
+::cue {
+  color: blue;
+}
+70. 用于截断多行文本的line-clamp
+
+使用 line-clamp 属性限制元素内显示的行数。
+
+.truncated-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+71. scroll-snap-align 
+
+scroll-snap-align 属性控制滚动容器内滚动捕捉点的对齐方式，确保精确控制滚动行为并增强用户体验。
+
+.container {
+  scroll-snap-type: x mandatory;
+}
+.item {
+  scroll-snap-align: center;
+}
+72. overscroll-behavior
+
+overscroll-behavior 使您能够定义浏览器应如何处理滚动过度，防止不必要的滚动效果并改善整体滚动体验。
+
+.scrollable {
+  overscroll-behavior: contain;
+}
+73. 字体字距调整
+
+字体字距调整允许微调字符间距，通过调整文本元素内字符之间的间距来确保最佳的可读性。
+
+p {
+  font-kerning: auto;
+}
+74. 形状边缘
+
+当与 CSS 形状结合使用时，形状边距指定浮动元素形状周围的边距，从而可以精确控制文本换行和布局。
+
+.shape {
+  shape-margin: 20px;
+}
+75. 滚动边距
+
+滚动边距设置滚动容器边缘和滚动内容开始之间的边距，通过提供滚动缓冲空间来增强用户体验。
+
+.container {
+  scroll-margin-top: 100px;
+}
+76. 选项卡大小
+
+滚动边距设置滚动容器边缘和滚动内容开始之间的边距，通过提供滚动缓冲空间来增强用户体验。
+
+pre {
+  tab-size: 4;
+}
+77. 文本最后对齐
+
+text-align-last 确定块元素中最后一行文本的对齐方式，从而提供对多行块中文本对齐的精确控制。
+
+p {
+  text-align-last: justify;
+}
+78. 文本对齐
+
+此属性控制文本对齐行为，指定是否应使用字间或字符间间距进行文本对齐。
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+79. 列填充
+
+列填充指示内容如何跨多列布局分布，允许跨列顺序或平衡分布内容。
+
+.container {
+  column-count: 3;
+  column-fill: auto;
+}
+80. 轮廓偏移
+
+轮廓偏移调整轮廓和元素边缘之间的空间，从而可以更好地控制轮廓的外观而不影响布局。
+
+button {
+  outline: 2px solid blue;
+  outline-offset: 4px;
+}
+81. 字体变体数字
+
+此属性允许对数字排版渲染进行细粒度控制，从而启用诸如衬里和旧式数字、分数和序数指示符等功能。
+
+p {
+  font-variant-numeric: lining-nums;
+}
+82. 字体光学尺寸
+
+启用或禁用字体光学尺寸调整以调整字符的间距和比例，以改善各种字体大小的视觉和谐。
+
+p {
+  font-optical-sizing: auto;
+}
+83. 文本装饰厚度
+
+控制文本装饰的粗细，例如下划线、上划线和穿线，以进行精确定制。
+
+p {
+  text-decoration-thickness: 2px;
+}
+84. 文本下划线偏移
+
+调整下划线相对于文本基线的位置，以改进排版细化。
+
+p {
+  text-underline-offset: 3px;
+}
+85. 滚动填充块
+
+定义在可滚动块容器周围添加的填充空间，以确保内容在滚动期间保持可见和可访问。
+
+.container {
+  scroll-padding-block: 20px;
+}
+86. 内联滚动填充
+
+设置在可滚动内联容器周围添加的填充空间，以增强滚动交互期间的用户体验。
+
+.container {
+  scroll-padding-inline: 10px;
+}
+87. 换行
+
+指定单词或字符内的换行方式，以控制换行行为，从而改进文本布局和可读性。
+
+p {
+  line-break: strict;
+}
+88. 盒子装饰打破
+
+控制跨分段元素的边框和填充的渲染，以确保跨多行或多列分割的元素的样式一致。
+
+.element {
+  box-decoration-break: clone;
+}
+89. 首字母
+
+将块元素的第一个字母或首字母字符设计为装饰性首字下沉或其他视觉上突出的首字母字符。
+
+p::first-letter {
+  font-size: 2em;
+  float: left;
+}
+90. 图像渲染
+
+调整图像的渲染质量和性能，优化各种场景的图像显示。
+
+img {
+  image-rendering: pixelated;
+}
+91. 字体功能设置
+
+font-feature-settings 允许您启用或禁用字体中的 OpenType 功能，例如，连字、字距调整和样式替代。
+
+p {
+  font-feature-settings: "liga" on;
+}
+92. 文本导向
+
+此属性控制文本在其包含框中的方向，从而启用垂直或横向文本布局。
+
+.vertical-text {
+  text-orientation: sideways;
+}
+93. 文本装饰-跳过墨迹
+
+text-decoration-skip-ink 控制文本装饰是否应跳过上升部分和下降部分，从而改善下划线和穿线的外观。
+
+p {
+  text-decoration-skip-ink: auto;
+}
+94. 文本下划线位置
+
+text-underline-position 调整下划线相对于文本基线的位置，从而可以精确控制下划线的位置。
+
+p {
+  text-underline-position: under;
+}
+95. 图像导向
+
+image-orientation 控制图像的方向，允许您根据需要旋转或翻转它。
+
+img {
+  image-orientation: from-image;
+}
+96. column-span
+
+column-span 允许一个元素在多列布局中跨越多个列，从而实现更灵活和动态的设计。
+
+.spanning-element {
+  column-span: all;
+}
+97. contain
+
+contains 指定元素的包含策略，通过限制布局计算和渲染的范围来实现优化，从而提高性能。
+
+.optimized-element {
+  contain: layout;
+}
+98. 内容可见性
+
+内容可见性允许您控制屏幕外或隐藏内容的渲染行为，通过跳过隐藏元素的布局和绘制阶段来提高渲染性能。
+
+.off-screen {
+  content-visibility: auto;
+}
+99. 文字装饰风格
+
+text-decoration-style 指定用于文本装饰的线条样式，允许您选择不同的线条样式，例如实线、双线、点线或虚线。
+
+p {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+100. 字间距
+
+字间距调整文本元素中字之间的间距，使您可以微调版式布局并提高可读性。
+
+p {
+  word-spacing: 2px;
+}
