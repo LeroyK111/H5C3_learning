@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div" class=""></div>
+
+    <script>
+      const div = document.querySelector("#div");
+      setTimeout(() => {
+        // 设置尺寸
+        // div.style.width = '0px';
+        // div.style.height = '0px';
+        // 设置透明度
+        // div.style.opacity = 0;
+        // 设置存在
+        div.style.display = 'none';
+      }, 1000);
+    </script>
+  </body>
+</html>
