@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>看到下面</div>
+      <!-- 修改url可以让子页面获取到token -->
+      <iframe
+        id="out"
+        src="http://127.0.0.1:5500/HTML+CSS/H5%E8%BF%9B%E9%98%B6/structure/test/insert.html?token=123"
+      ></iframe>
+    </div>
+    <script>
+      const out = document.querySelector("#out");
+      // 测试，子页面不能获取对象和属性
+      const c = "const";
+      let l = "let";
+      var v = "var";
+      var callback = () => {};
+      class Cb {}
+
+      // 存储token，可以被子页面获取
+      localStorage.setItem("out", "dflkasjdkfjdkslfj");
+
+      // !dom传参失败
+      // const div = document.createElement("div");
+      // div.id = "token";
+      // div.innerHTML = "123";
+      // document.body.appendChild(div);
+      // out.innerHTML = '<div id="token">123</div>';
+
+      // !根据句柄修改子页面，失败
+      // const doct = out.contentDocument;
+      // console.log(out.contentWindow.document.querySelector('#d'));
+      // console.log(doct.getElementById("d"));
+    </script>
+
+    <script></script>
+  </body>
+</html>

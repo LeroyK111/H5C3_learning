@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="d">内部属性</div>
+    <script>
+      const div = document.querySelector("#d");
+      // console.log(c, l, v);
+      // console.log(callback, Cb);
+      console.log("外部属性可以被 嵌套html 获取", localStorage.getItem("out"));
+
+      // get分割，传递
+      console.log(location.search.split("=")[1]);
+
+      // 使用dom传参失败
+      // console.log(document.querySelector("#div"));
+  
+    </script>
+  </body>
+</html>
