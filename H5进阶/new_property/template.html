@@ -1,0 +1,10 @@
+<template id="my-template">
+  <div>
+      <p>Hello, this is a template!</p>
+  </div>
+</template>
+<script>
+  var template = document.getElementById('my-template');
+  var clone = document.importNode(template.content, true);
+  document.body.appendChild(clone);
+</script>
