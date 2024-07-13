@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --primary-color: blue;
+        --secondary-color: red;
+        --font-size: 16px;
+        --transition-duration: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      /**
+       * @description Use JS to get global css variables
+       * @param cssVariableName variable name
+       * @returns {string} variable value
+       */
+      // 获取css全局变量
+      function getCssVariableValue(cssVariableName) {
+        return getComputedStyle(document.documentElement).getPropertyValue(
+          cssVariableName
+        );
+      }
+      const v = getCssVariableValue("--primary-color")
+      console.log(v);
+      /**
+       * @description Set global CSS variables with JS
+       * @param {string} cssVariableName variable name
+       * @param {string} cssVariableValue variable value
+       */
+      function setCssVariableValue(cssVariableName, cssVariableValue) {
+        document.documentElement.style.setProperty(
+          cssVariableName,
+          cssVariableValue
+        );
+      }
+    </script>
+  </body>
+</html>
