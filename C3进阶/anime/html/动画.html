@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>动画animation</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/index.css" />
     <style>
-        /* 页面一打开，一个盒子就从左边走到右边 */
-        .box1 {
-            width: 200px;
-            height: 200px;
-            background-color: red;
-            /* 调用动画，集合写法 */
-            /* animation: identifier 5s ease 0s infinite alternate-reverse both running; */
-            /* 动画序列名 */
-            animation-name: identifier;
-            /* 总时间 */
-            animation-duration: 2s;
-            /* 节奏(可以自己编写) */
-            animation-timing-function: linear;
-            /* 延迟时间 */
-            animation-delay: 0s;
-            /* 重复次数 infinite|number */
-            animation-iteration-count: infinite;
-            /* 是否反序列动画normal|alternate|reverse */
-            animation-direction: normal;
-            /* 返回起始状态
+      /* 页面一打开，一个盒子就从左边走到右边 */
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        /* 调用动画，集合写法 */
+        /* animation: identifier 5s ease 0s infinite alternate-reverse both running; */
+        /* 动画序列名 */
+        animation-name: identifier;
+        /* 总时间 */
+        animation-duration: 2s;
+        /* 节奏(可以自己编写) */
+        animation-timing-function: linear;
+        /* 延迟时间 */
+        animation-delay: 0s;
+        /* 重复次数 infinite|number */
+        animation-iteration-count: infinite;
+        /* 是否反序列动画normal|alternate|reverse */
+        animation-direction: normal;
+        /* 返回起始状态
             animation-fill-mode: none; 
             animation-fill-mode: forwards; 回到最后一帧的状态
             animation-fill-mode: backwards; 回到第一帧的状态
             animation-fill-mode: both; 前后最后一帧
             */
-            animation-fill-mode: both;
-            /* 是否连续播放(一般用js控制该变量) running|paused */
-            animation-play-state: running;
+        animation-fill-mode: both;
+        /* 是否连续播放(一般用js控制该变量) running|paused */
+        animation-play-state: running;
+      }
+
+      /* 动画序列(关键帧) */
+      @keyframes identifier {
+        /* 写法一 */
+        from,
+        20%,
+        53%,
+        80%,
+        to {
+          transform: translate3d(0, 0, 0);
         }
 
-        /* 动画序列(关键帧) */
-        @keyframes identifier {
-            0% {
-                transform: translate(0, 0);
-                background-color: red;
-            }
+        /* 写法二 */
 
-            25% {
-                transform: translate(1000px, 0);
-                background-color: yellow;
-            }
-
-            50% {
-                transform: translate(1000px, 1000px);
-                background-color: green;
-            }
-
-
-            75% {
-                /* animation-fill-mode该属性跟100%有关 */
-                transform: translate(0, 1000px);
-                background-color: purple;
-            }
-
+        0% {
+          transform: translate(0, 0);
+          background-color: red;
         }
+
+        25% {
+          transform: translate(1000px, 0);
+          background-color: yellow;
+        }
+
+        50% {
+          transform: translate(1000px, 1000px);
+          background-color: green;
+        }
+
+        75% {
+          /* animation-fill-mode该属性跟100%有关 */
+          transform: translate(0, 1000px);
+          background-color: purple;
+        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="box1"></div>
-</body>
-
+  </body>
 </html>
