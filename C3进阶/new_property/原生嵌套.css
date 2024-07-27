@@ -1,0 +1,7 @@
+.card {
+  color: aliceblue;
+
+  .d {
+    display: flex;
+  }
+}

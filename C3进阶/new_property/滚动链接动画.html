@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-timeline Example</title>
+    <style>
+        @scroll-timeline scrollTimeline {
+            source: auto;
+            orientation: block;
+            scroll-offsets: 0% 100%;
+        }
+
+        .animated-element {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 1000px 0;
+            animation: move 1s linear infinite;
+            scroll-timeline: scrollTimeline;
+        }
+
+        @keyframes move {
+            from { transform: translateX(0); }
+            to { transform: translateX(300px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-element"></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@property --main-color {
+  syntax: '<color>';
+  initial-value: #fff;
+  inherits: true;
+}
+
+:root {
+  --main-color: #fff; 
+}
+
