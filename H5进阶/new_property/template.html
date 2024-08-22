@@ -1,10 +1,61 @@
-<template id="my-template">
-  <div>
-      <p>Hello, this is a template!</p>
-  </div>
-</template>
-<script>
-  var template = document.getElementById('my-template');
-  var clone = document.importNode(template.content, true);
-  document.body.appendChild(clone);
-</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+      
+      <template> 标记是一个 HTML 元素，它包含页面加载时不会渲染的客户端内容。相反，可以使用 JavaScript 在稍后克隆内容并将其插入文档中。
+
+
+      <template> 标记最常见的用途之一是动态生成动态内容。例如，你可以克隆模板的内容并将其附加到 DOM 以显示从 API 获取的数据。
+    
+    
+    <template> 标记非常适合创建可重复使用的 UI 组件，例如，模式窗口、工具提示或卡片。通过将组件结构存储在模板中，你可以轻松实例化多个实例而无需重复代码。
+
+
+      许多现代 JavaScript 框架和库（如 React、Vue 和 Angular）都使用其模板系统。但是，原生 <template> 标记在某些情况下仍然有用，例如，当需要管理框架生命周期之外的内容时。
+
+
+        <template> 标记对于性能优化很有用。由于 <template> 中的内容在克隆之前不会呈现，因此，可以通过延迟呈现非必要内容来减少初始页面加载时间。
+
+
+          使用 <template> 标签时，请注意可访问性。由于 <template> 中的内容在插入 DOM 之前不会呈现，因此，确保所有用户都可以访问克隆的内容非常重要。
+
+
+            对于需要显示大型数据集的应用程序，<template> 标记可以帮助高效地管理 DOM。通过克隆模板而不是手动创建元素，可以保持代码整洁并优化 DOM 交互。
+
+
+              <template> 标记非常适合需要根据用户交互或数据有条件地显示内容的场景。这允许你提前准备内容并在必要时显示它。
+
+
+                表单通常需要动态元素，例如，添加或删除输入字段。<template> 标签可让你在需要时克隆预定义的表单字段，从而简化此过程。
+
+
+                  <template> 标签是创建 Web 组件不可或缺的一部分。通过将 <template> 与自定义元素结合使用，你可以在应用程序中封装和重用复杂的 UI 组件。
+    -->
+    <template id="my-template">
+      <div>
+        <p>Hello, this is a template!</p>
+      </div>
+    </template>
+
+    <button
+      onclick="
+  console.log(document.body.querySelector('div'));
+  if (document.body.querySelector('div') ){
+    document.body.removeChild(document.body.querySelector('div'));
+  } else {
+    const template = document.getElementById('my-template')
+    const clone = document.importNode(template.content, true)
+    document.body.appendChild(clone);
+  }
+"
+    >
+      点我
+    </button>
+  </body>
+</html>
