@@ -1,0 +1,11 @@
+/* 趣味设计具有一定程度的随机化，而 CSS 中却没有这种功能。但此模块引入了两个新函数，它们可从列表 (random-item()) 或范围 (random()) 中返回随机值。 */
+
+
+div {
+  width: random(100px, 300px);
+  background-color: random-item(red, green, blue);
+  /* 支持分号分割 */
+ font-family: random-item(Times, serif; Arial, sans-serif; Roboto, sans-serif);
+}
+
+

@@ -1,0 +1,5 @@
+/* progress()：通用，适用于任何数学函数。media-progress()：适用于媒体功能。content-progress()：适用于容器查询。 */
+
+div {
+  width: calc(100% * progress(50px from 0px to 100px));
+}

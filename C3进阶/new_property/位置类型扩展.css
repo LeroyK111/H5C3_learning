@@ -1,0 +1,12 @@
+/* 
+CSS 已经具有边距、填充和边框的逻辑属性 - 这些值与文本书写方向有关，并且可能因语言而异。现在为位置类型引入了此功能（不要与位置属性混淆）。指示位置的属性（例如 background-position、object-position 等）可以指定与文本流和方向相关的值。可以使用的新值为：
+x-start
+x-end
+y-start
+y-end
+block-start
+block-end
+inline-start
+inline-end
+
+*/

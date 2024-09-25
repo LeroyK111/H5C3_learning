@@ -21,6 +21,11 @@
             height: 20%;
             background-color: skyblue;
         }
+
+        /* 此模块还引入了一个新功能，可以安全地操作内在值（auto、max-content、fit-content 等）。此功能在过渡和动画中特别有用。 */
+        details[open]::details-content {
+            height: calc-size(auto, size);
+        }
     </style>
 </head>
 
