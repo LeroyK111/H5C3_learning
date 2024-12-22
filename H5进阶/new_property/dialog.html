@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>dialog</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      #modal {
+        border: none;
+        border-radius: 8px;
+        margin: 0 auto;
+        padding: 20px;
+        position: fixed;
+        top: -100%;
+        left: 20%;
+        transform: translateX(-50%);
+        animation: slideIn 0.3s forwards;
+      }
+      @keyframes slideIn {
+        from {
+          top: -100%;
+        }
+        to {
+          top: 10%;
+        }
+      }
+      #modal .modal-header {
+        width: 400px;
+        padding: 10px 0;
+        display: flex;
+        border-bottom: 1px solid #eee;
+      }
+      #modal .modal-header .modal-title {
+        flex: 1;
+        font-size: 20px;
+      }
+      #modal .modal-content {
+        border-bottom: 1px solid #eee;
+        padding: 20px 0;
+        font-size: 15px;
+      }
+      #modal .modal-header .modal-close {
+        width: 50px;
+        font-size: 23px;
+        text-align: right;
+        cursor: pointer;
+      }
+      #modal::backdrop {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background: rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="modal.showModal()">打开</button>
+    <dialog id="modal">
+      <div class="modal-body">
+        <div class="modal-header">
+          <div class="modal-title">标题</div>
+          <div class="modal-close" onclick="modal.close()">&times;</div>
+        </div>
+        <div class="modal-content">这是内容，这是内容。</div>
+      </div>
+    </dialog>
+    <script>
+      console.log(modal)
+      
+
+    </script>
+  </body>
+</html>
