@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+  <style>
+    /* 下拉样式 */
+    select,
+    ::picker(select)  {
+        appearance: base-select;
+    }
+  </style>
   <body>
     <!--简单下拉菜单+多选 -->
     <select multiple>
@@ -16,6 +23,7 @@
     <select>
       <optgroup label="Fruits">
         <option>Apple</option>
+        <hr>
         <option>Banana</option>
         <option>Mango</option>
       </optgroup>

@@ -46,5 +46,11 @@
       frameborder="0"
       allowfullscreen
     ></iframe>
+
+    <!-- 在这个例子中，我们根据设备的方向进行视频选择：在横向（landscape）模式下加载一个视频文件，而在其他情况加载另一个。这使得视频内容可以根据用户的设备特性进行动态调整，不仅保证了视觉效果的一致性，也显著优化了网络性能。 -->
+    <video autoplay controls playsinline muted loop>
+        <source media='(orientation: landscape)' src='sunset-landscape-1080.mp4'>
+        <source src='sunset-portrait-1080.mp4'>
+      </video>
   </body>
 </html>

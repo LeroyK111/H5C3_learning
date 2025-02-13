@@ -19,6 +19,13 @@
       img:hover {
         filter: blur(0);
       }
+
+      div {
+        /* 这会将元素剪裁为蒙版图像的形状。要获得墨水效果，只需使用墨水形状的 SVG 或图像作为蒙版即可。 */
+        mask-image: url('ink-mask.svg'); mask-size: cover;
+        /* 这会逐个像素地将图像与其背景进行比较，并移除较亮的区域，使较暗的部分可见。它并不适用于所有图像，但对许多图像来说效果很好。 */
+        mix-blend-mode: darken;
+      }
     </style>
   </head>
 

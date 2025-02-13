@@ -10,6 +10,11 @@
       --background-color: #fff;
       --text-color: #000;
     }
+
+    div {
+      /* 解决方法：让明暗功能处理它。 */
+      color: light-dark(#000, #fff);
+    }
     /* 查询系统本身模式 */
     @media (prefers-color-scheme: dark) {
       :root {
