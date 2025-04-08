@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>target-text 示例</title>
+  <style>
+    ::target-text {
+      background: yellow;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h2>滚动到并高亮指定文字</h2>
+  <p>你可以点击下面的链接，让特定文字被自动滚动并高亮显示。</p>
+
+  <p>
+    <!-- 事件发生特效 -->
+    👉 <a href="#:~:text=高亮这段文字">点击这里高亮“高亮这段文字”</a>
+  </p>
+
+  <p>
+    这是一些普通的段落，用来演示目标文字的上下文。
+  </p>
+  <p>
+    这是一段很普通的介绍，但你可以尝试让浏览器 <strong>高亮这段文字</strong>，不需要加任何 id 或 class！
+  </p>
+</body>
+</html>

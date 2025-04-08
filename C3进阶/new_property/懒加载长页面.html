@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>content-visibility 示例</title>
+  <style>
+    .lazy-load-section {
+      content-visibility: auto;
+      padding: 20px;
+      margin: 50px 0;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    body {
+      font-family: sans-serif;
+      line-height: 1.6;
+    }
+
+    .spacer {
+      height: 100vh; /* 模拟滚动页面 */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>页面顶部</h1>
+  <div class="spacer">⬇️ 向下滚动</div>
+
+  <div class="lazy-load-section">
+    <h2>这是一个懒加载的区域</h2>
+    <p>
+      当你滚动到这里时，浏览器才真正渲染这部分内容。未滚动到时，不会占用资源！
+    </p>
+    <p>
+      非常适合优化长网页，如：新闻流、博客列表、商品列表等。
+    </p>
+  </div>
+
+  <div class="spacer"></div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>滚动条样式示例</title>
+  <style>
+    .scrollable {
+      width: 400px;
+      height: 200px;
+      overflow: auto;
+      border: 1px solid #aaa;
+      padding: 10px;
+
+      /* 让滚动条出现时不影响内容宽度（避免跳动） */
+      scrollbar-gutter: stable both-edges;
+
+      /* 设置滚动条颜色（只在 Firefox 中有效） */
+      scrollbar-color: #444 #ccc;
+    }
+
+    .content {
+      height: 500px; /* 使内容超出容器，强制出现滚动条 */
+    }
+  </style>
+</head>
+<body>
+  <h2>滚动条测试区</h2>
+  <div class="scrollable">
+    <div class="content">
+      <p>这里是很多很多内容的区域。</p>
+      <p>滚动条将出现在右侧。</p>
+      <p>尝试缩放窗口，看内容是否“跳动”。</p>
+      <p>在 Firefox 中滚动条颜色应该是深灰色和浅灰色。</p>
+      <p>继续滚动……</p>
+      <p>继续滚动……</p>
+      <p>继续滚动……</p>
+      <p>继续滚动……</p>
+      <p>继续滚动……</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>details/summary 示例</title>
+  <style>
+    details {
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      padding: 0.5em 0.5em 0;
+      width: 300px;
+      font-family: sans-serif;
+    }
+
+    summary {
+      font-weight: bold;
+      margin: -0.5em -0.5em 0;
+      padding: 0.5em;
+      cursor: pointer;
+    }
+
+    details[open] {
+      padding: 0.5em;
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid #aaa;
+      margin-bottom: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>FAQ 示例</h2>
+
+  <details>
+    <summary>什么是 ChatGPT？</summary>
+    <p>ChatGPT 是由 OpenAI 开发的 AI 聊天助手，可以回答问题、写代码、翻译等。</p>
+  </details>
+
+  <br>
+
+  <details>
+    <summary>如何使用 details 标签？</summary>
+    <p>使用 HTML 的 &lt;details&gt; 和 &lt;summary&gt; 元素可以创建可展开的内容区域，非常适合做 FAQ。</p>
+  </details>
+
+</body>
+</html>

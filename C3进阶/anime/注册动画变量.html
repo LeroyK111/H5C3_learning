@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>@property 动画示例</title>
+    <style>
+      /* 注册动画变量 */
+      @property --animation-progress {
+        syntax: "<number>";
+        inherits: false;
+        initial-value: 0;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: royalblue;
+        margin: 100px auto;
+        border-radius: 12px;
+
+        /* 用变量控制 transform 缩放 */
+        transform: scale(calc(1 + var(--animation-progress) * 0.5));
+
+        /* 动画配置 */
+        transition: --animation-progress 1s ease-in-out;
+        --animation-progress: 0;
+      }
+
+      .box:hover {
+        --animation-progress: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

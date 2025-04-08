@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>font-size-adjust 示例</title>
+  <style>
+    /* 模拟加载失败的自定义字体 */
+    @font-face {
+      font-family: "CustomFont";
+      src: local("不存在的字体"); /* 故意找不到字体 */
+    }
+
+    .text-with-adjust {
+      font-family: "CustomFont", Arial, sans-serif;
+      font-size-adjust: 0.5;
+      font-size: 32px;
+    }
+
+    .text-no-adjust {
+      font-family: "CustomFont", Arial, sans-serif;
+      font-size: 32px;
+    }
+  </style>
+</head>
+<body>
+  <h2>无 font-size-adjust：</h2>
+  <p class="text-no-adjust">Hello 世界！字体大小可能不一致</p>
+
+  <h2>有 font-size-adjust: 0.5：</h2>
+  <p class="text-with-adjust">Hello 世界！字体大小更接近预期</p>
+</body>
+</html>

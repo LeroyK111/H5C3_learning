@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>transition-behavior 示例</title>
+  <style>
+    .card {
+      background-color: #f0f0f0;
+      padding: 20px;
+      width: 300px;
+      border-radius: 8px;
+      transition-property: opacity, display;
+      transition-duration: 0.25s;
+      transition-behavior: allow-discrete; /* 实验性功能！ */
+      opacity: 1;
+      display: block;
+    }
+
+    .card.fade-out {
+      opacity: 0;
+      display: none;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="myCard">
+    👋 你好，这是一个可淡出的卡片！
+  </div>
+
+  <button onclick="fadeOut()">点我隐藏卡片</button>
+
+  <script>
+    function fadeOut() {
+      const card = document.getElementById("myCard");
+      card.classList.add("fade-out");
+    }
+  </script>
+
+</body>
+</html>
