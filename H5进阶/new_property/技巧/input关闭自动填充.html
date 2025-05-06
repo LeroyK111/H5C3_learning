@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      input标签中它支持autocomplete属性，该属性规定form或input域应该拥有自动完成功能。他对应的值如下：on
+      默认。规定启用自动完成功能。 off
+      规定禁用自动完成功能。autocomplete支持的属性值有好几十个，而这2个是最常用的。所以我们只需要设置
+      autocomplete='off'，这样不会记录用户输过的值。
+    </div>
+    <input type="text" autocomplete="off" />
+    <div>
+      <!-- 1、浏览器中的表单会记录刚填完的input数据，为防止用户信息泄露，可以在input中加入autocomplete=“off”，也可以在form表单中加入autocomplete，可以防止表单记录填过的表单数据，不会记录用户输过的值。2、autocomplete 属性适用于 <form>，以及下面的 <input> 类型：text, search, url, telephone, email, password, datepickers, range 以及 color。 -->
+    </div>
+    <form autocomplete="off">
+      <input type="text" />
+    </form>
+  </body>
+</html>
