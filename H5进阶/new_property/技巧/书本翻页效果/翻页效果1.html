@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="book">
+      <div class="page page1">第一页</div>
+      <div class="page page2">第二页</div>
+    </div>
+
+
+
+    <style>
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      perspective: 1000px; /* 3D 透视效果 */
+      }
+
+      .book {
+      width: 200px;
+      height: 300px;
+      position: relative;
+      transform-style: preserve-3d; /* 保持 3D 效果 */
+      }
+
+      .page {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 04px8pxrgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      backface-visibility: hidden; /* 隐藏背面 */
+      transition: transform 1s ease-in-out;
+      }
+
+      .page1 {
+      transform-origin: left;
+      }
+
+
+      .page2 {
+      transform-origin: right;
+      transform: rotateY(180deg); /* 初始状态为背面 */
+      }
+
+      .book:hover .page1 {
+      transform: rotateY(-180deg); /* 翻页效果 */
+      }
+
+      .book:hover .page2 {
+      transform: rotateY(0deg); /* 翻页效果 */
+      }
+    </style>
+  </body>
+</html>
