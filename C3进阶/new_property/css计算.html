@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css中的计算</title>
+        <link rel="stylesheet" href="index.css">
+        <style>
+            .father {
+                width: 100svw;
+                height: 100svh;
+                background-color: pink;
+            }
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>css中的计算</title>
-    <link rel="stylesheet" href="index.css">
-    <style>
-        .father {
-            width: 300px;
-            height: 200px;
-            background-color: pink;
-        }
+            .son {
+                /* width: 150px; */
+                /* calc计算函数 */
+                width: calc(100% - 30px);
+                height: 20%;
+                background-color: skyblue;
+            }
 
-        .son {
-            /* width: 150px; */
-            /* calc计算函数 */
-            width: calc(100% - 30px);
-            height: 20%;
-            background-color: skyblue;
-        }
+            /* 此模块还引入了一个新功能，可以安全地操作内在值（auto、max-content、fit-content 等）。此功能在过渡和动画中特别有用。 */
+            details::details-content {
+                height: 0;
+                overflow: hidden;
+                transition: height 0.3s ease;
+            }
 
-        /* 此模块还引入了一个新功能，可以安全地操作内在值（auto、max-content、fit-content 等）。此功能在过渡和动画中特别有用。 */
-        details[open]::details-content {
-            height: calc-size(auto, size);
-        }
-    </style>
-</head>
+            details[open]::details-content {
+                /* auto 自动  */
+                /* size 三倍高度 */
+                height: calc-size(auto, size * 3);
+            }
+        </style>
+    </head>
 
-<body>
-    <div class="father">
-        <div class="son"></div>
-    </div>
-</body>
+    <body>
+        <div class="father">
+            <div class="son"></div>
+        </div>
 
+        <details>
+            <summary>点击展开</summary>
+            <p>这里是可折叠的内容。</p>
+        </details>
+    </body>
 </html>
