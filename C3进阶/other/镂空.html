@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .fancy-button {
+        background-color: blue;
+
+        /* 标准写法 */
+        mask-image: url();
+        /* Safari 等旧版 WebKit 浏览器兼容 */
+        -webkit-mask-image: url();
+
+        /* 推荐添加位置、重复与大小控制 */
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+      }
+    </style>
+
+    <button class="fancy-button">Click Me!</button>
+  </body>
+</html>l
