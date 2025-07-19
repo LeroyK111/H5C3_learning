@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* 传统写法 */
+      @media  (orientation: landscape) {
+          .card  {
+           flex-direction: row;
+        }
+      }
+      @media  (orientation: portrait) {
+        .card  {
+           flex-direction: column;
+        }
+      }
+
+      /* 新写法一行搞定 */
+      .card  {
+        flex-direction:  if(
+              media(orientation: landscape): row;
+          else: column  
+        );
+      }
+    </style>
+  </body>
+</html>
