@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .fancy-button {
+        background-color: blue;
+
+        /* 标准写法 */
+        mask-image: url();
+        /* Safari 等旧版 WebKit 浏览器兼容 */
+        -webkit-mask-image: url();
+
+        /* 推荐添加位置、重复与大小控制 */
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+      }
+
+      /*
+      方法1，直接使用这个文字镂空
+      */
+      .one {
+        font-size: 4rem;
+        font-weight: bold;
+        color: transparent; /* 关键：文字透明 */
+        -webkit-text-stroke: 2px #3498db; /* 描边宽度和颜色 */
+        text-stroke: 2px #3498db;
+      }
+
+      /*
+      方式二 伪元素叠加法
+      */
+
+
+
+      /* 创建镂空层 */
+      .hollow-compatible {
+  position: relative; /* Essential for absolute positioning of ::after */
+  color: black; /* Or your desired outline color */
+  /* Other styles for your main text */
+}
+
+.hollow-compatible::after {
+  content: attr(data-text); /* Get text from data-text attribute */
+  position: absolute;
+  top: 3px; /* Adjust for desired offset */
+  left: 3px; /* Adjust for desired offset */
+  color: white; /* This will be the "inner" color or fill */
+  font-size: 0.92em; /* Slightly smaller fill for an outline effect, or same size for a shadow */
+  z-index: -1; /* Place it behind the original text to act as a shadow/outline */
+}
+
+
+/*
+background-clip文本裁剪（创意效果）
+
+*/
+.hollow-advanced {
+  font-size: 4rem;
+  font-weight: 900;
+  background: url(../images/texture.jpg) center/cover; /* Your desired background image */
+  -webkit-background-clip: text; /* For WebKit browsers (Chrome, Safari) */
+  background-clip: text; /* Standard property */
+  color: transparent; /* Makes the text itself transparent so the background shows through */
+  /* -webkit-text-fill-color: transparent; is redundant if color: transparent is used */
+
+  /* Add text stroke effect */
+  -webkit-text-stroke: 2px #fff; /* WebKit specific stroke */
+  text-stroke: 2px #fff; /* Standard (though less widely supported yet) */
+  
+  /* Text shadow for fallback or additional effect */
+  text-shadow:
+    2px 2px 0 #fff,
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff, /* Add these for a more complete outline */
+    -2px 2px 0 #fff;
+}
+
+
+    </style>
+
+    <button class="fancy-button">Click Me!</button>
+    <span class="one">21231323</span>
+    <h2 class="hollow-compatible" >="限时抢购">限时抢购</h2>
+  </body>
+</html>l
