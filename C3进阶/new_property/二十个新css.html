@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20 个现代 CSS 特性演示</title>
+<style>
+  body { font-family: sans-serif; margin: 2rem; line-height: 1.5; }
+  section { margin-bottom: 4rem; padding: 1rem; border: 1px solid #ccc; border-radius: 8px; }
+  h2 { color: #4f46e5; margin-bottom: 0.5rem; }
+  button, .box, .card, textarea, .panel { margin: 0.5rem 0; padding: 0.5rem; }
+</style>
+</head>
+<body>
+<h1>20 个现代 CSS 特性演示</h1>
+
+<!-- 1. @layer -->
+<section>
+<h2>1. @layer</h2>
+<p>定义层级关系，实现样式覆盖控制。</p>
+<style>
+@layer reset, theme, components;
+
+@layer reset { * { margin:0; padding:0; box-sizing:border-box; } }
+@layer theme { :root { --color-primary:#4f46e5; } }
+@layer components { button { background:var(--color-primary); color:white; border:none; padding:0.5rem 1rem; border-radius:6px; } }
+</style>
+<button>按钮来自 components 层</button>
+</section>
+
+<!-- 2. text-wrap: balance -->
+<section>
+<h2>2. text-wrap: balance</h2>
+<p>均衡多行文本显示，避免单词孤立一行。</p>
+<style>
+h3.balance { text-wrap: balance; width: 300px; border:1px dashed #ccc; padding:0.5rem; }
+</style>
+<h3 class="balance">Super Long Heading With One Word Alone</h3>
+</section>
+
+<!-- 3. CSS 嵌套 -->
+<section>
+<h2>3. CSS 嵌套</h2>
+<p>原生支持嵌套，无需预处理器。</p>
+<style>
+.main-title {
+  font-size: 2rem;
+}
+@media (min-width: 800px) {
+  .main-title { font-size: 3rem; }
+}
+.main-title.red { color: red; }
+.main-title .subtitle { font-size:1.25rem; }
+</style>
+<div class="main-title red">主标题
+  <div class="subtitle">副标题</div>
+</div>
+</section>
+
+<!-- 4. 容器查询 -->
+<section>
+<h2>4. 容器查询</h2>
+<p>根据容器尺寸而非视口尺寸调整样式。</p>
+<style>
+.card { container-type: inline-size; display:flex; flex-direction: column; border:1px solid #ccc; padding:1rem; }
+@container (min-width: 450px) { .card { flex-direction: row; } }
+</style>
+<div class="card"><div>内容A</div><div>内容B</div></div>
+</section>
+
+<!-- 5. 相对颜色 -->
+<section>
+<h2>5. 相对颜色</h2>
+<p>动态计算颜色，支持 color-mix 等。</p>
+<style>
+.button-color {
+  --bg: oklch(70% 0.2 250);
+  background: var(--bg);
+  border: 2px solid color-mix(in oklch, var(--bg) 85%, black);
+  color:white; padding:0.5rem 1rem; display:inline-block;
+}
+.button-color:hover {
+  background: color-mix(in oklch, var(--bg) 92.5%, black);
+}
+</style>
+<div class="button-color">悬停试色</div>
+</section>
+
+<!-- 6. :has() 父选择器 -->
+<section>
+<h2>6. :has() 父选择器</h2>
+<p>根据子元素状态修改父元素样式。</p>
+<style>
+.input-group { padding:0.5rem; border:2px solid #ccc; margin:0.5rem 0; display:inline-block; }
+.input-group:has(input:valid) { border-color: green; }
+.input-group:has(input:invalid) { border-color: red; }
+</style>
+<div class="input-group"><input type="text" pattern="\d+" placeholder="请输入数字"></div>
+</section>
+
+<!-- 7. @property -->
+<section>
+<h2>7. @property</h2>
+<p>注册自定义属性，实现类型安全和动画化。</p>
+<style>
+@property --my-color { syntax: "<color>"; inherits: false; initial-value: red; }
+.box { --my-color:red; width:100px; height:100px; background:var(--my-color); transition: --my-color 0.5s; display:inline-block; }
+.box:hover { --my-color:green; }
+</style>
+<div class="box"></div>
+</section>
+
+<!-- 8. 子网格 -->
+<section>
+<h2>8. 子网格</h2>
+<p>子网格继承父网格轨道，无需手动同步列宽。</p>
+<style>
+.parent { display:grid; grid-template-columns:1fr 1fr; gap:1rem; border:1px dashed #ccc; padding:1rem; }
+.child { display:grid; grid-template-columns:subgrid; gap:inherit; background:#eee; }
+.child div { border:1px solid #999; padding:0.5rem; }
+</style>
+<div class="parent">
+  <div class="child"><div>A</div><div>B</div></div>
+  <div class="child"><div>C</div><div>D</div></div>
+</div>
+</section>
+
+<!-- 9. 多值 display -->
+<section>
+<h2>9. 多值 display</h2>
+<p>同时设置外部和内部布局。</p>
+<style>
+.multi-display { display: inline flex; border:1px solid #ccc; padding:0.5rem; }
+.multi-display div { margin:0 0.5rem; padding:0.25rem; background:#4f46e5; color:white; }
+</style>
+<div class="multi-display"><div>子1</div><div>子2</div></div>
+</section>
+
+<!-- 10. display: contents -->
+<section>
+<h2>10. display: contents</h2>
+<p>包装元素视觉消失，子元素表现如直接子元素。</p>
+<style>
+.wrapper { display: contents; }
+.wrapper > div { padding:0.5rem; background:#eee; border:1px solid #999; margin:0.25rem 0; }
+</style>
+<div class="wrapper"><div>子元素1</div><div>子元素2</div></div>
+</section>
+
+<!-- 11. 逻辑属性 -->
+<section>
+<h2>11. 逻辑属性</h2>
+<p>支持书写模式方向，自动适配 RTL。</p>
+<style>
+.logic-box { padding-inline-start:1rem; margin-block-end:1rem; border:1px solid #ccc; }
+</style>
+<div class="logic-box">逻辑属性示例</div>
+</section>
+
+<!-- 12. ::backdrop -->
+<section>
+<h2>12. ::backdrop</h2>
+<p>设置 dialog 弹窗背景样式。</p>
+<style>
+dialog::backdrop { background:rgba(0,0,0,0.3); backdrop-filter: blur(2px); }
+</style>
+<dialog open>模态窗口示例</dialog>
+</section>
+
+<!-- 13 & 14. transition-behavior + @starting-style -->
+<section>
+<h2>13 & 14. transition-behavior 与 @starting-style</h2>
+<p>让通常无法动画的属性实现过渡效果。</p>
+<style>
+@starting-style { dialog[open] { opacity:0; scale:0.8; } }
+dialog[open] { transition: opacity 0.3s, scale 0.3s; transition-behavior: allow-discrete; opacity:1; scale:1; }
+</style>
+<dialog open>过渡效果示例</dialog>
+</section>
+
+<!-- 15. field-sizing: content -->
+<section>
+<h2>15. field-sizing: content</h2>
+<p>textarea 自动随内容增大（仅 Chromium 支持）。</p>
+<style>
+textarea { field-sizing: content; width:200px; min-height:2rem; }
+</style>
+<textarea placeholder="输入内容试试"></textarea>
+</section>
+
+<!-- 16. @scope -->
+<section>
+<h2>16. @scope</h2>
+<p>限制样式在指定子树内生效。</p>
+<section>
+<style scoped>
+h2 { color: rebeccapurple; }
+</style>
+<h2>只在此 section 生效的标题</h2>
+</section>
+</section>
+
+<!-- 17. anchor() 定位 -->
+<section>
+<h2>17. anchor() 定位</h2>
+<p>元素相对其他元素锚点定位（前沿特性）。</p>
+<p>此功能浏览器前沿，目前 Chromium 实验支持，示意 HTML 不做可视演示。</p>
+</section>
+
+<!-- 18. 容器样式查询 -->
+<section>
+<h2>18. 容器样式查询</h2>
+<p>根据容器内样式值改变子元素布局（前沿特性）。</p>
+<p>此功能浏览器前沿，目前示意 HTML 不做可视演示。</p>
+</section>
+
+<!-- 19. interpolate-size: allow-keywords -->
+<section>
+<h2>19. interpolate-size: allow-keywords</h2>
+<p>支持 height/width auto 或 max-content 动画。</p>
+<p>浏览器前沿，仅 Chromium 支持示意。</p>
+</section>
+
+<!-- 20. CSS 的未来 -->
+<section>
+<h2>20. CSS 的未来</h2>
+<p>所有这些新特性开辟了 CSS 的新可能性。逐步增强即可体验未来 CSS。</p>
+</section>
+
+</body>
+</html>

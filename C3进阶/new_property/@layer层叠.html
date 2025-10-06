@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>@layer 示例</title>
+  <style>
+    /* 定义层的顺序 
+    在层叠层（Cascade Layers）机制中，层的优先级顺序是由 @layer 声明顺序决定的。
+后面声明的层会覆盖前面的层。
+    */
+    @layer reset, base, components, utilities;
+
+    /* ---------- reset 层 ---------- */
+    @layer reset {
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    }
+
+    /* ---------- base 层 ---------- */
+    @layer base {
+      body {
+        font-family: system-ui, sans-serif;
+        background: #f9fafb;
+        color: #333;
+        padding: 2rem;
+      }
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* ---------- components 层 ---------- */
+    @layer components {
+      .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.2s;
+      }
+      .btn-primary {
+        background: royalblue;
+        color: white;
+      }
+      .btn-primary:hover {
+        background: dodgerblue;
+      }
+    }
+
+    /* ---------- utilities 层 ---------- */
+    @layer utilities {
+      .text-center { text-align: center; }
+      .mt-2 { margin-top: 0.5rem; }
+      .mt-4 { margin-top: 1rem; }
+    }
+
+    /* ---------- 未分层样式（优先级最高） ---------- */
+    button.btn-primary {
+      background: crimson; /* 即使上面定义了 royalblue，这里会覆盖它 */
+    }
+
+
+    
+    
+  </style>
+
+
+  <style>
+    /*
+    可以引入三方css文件,再引入其中的层叠名
+    */
+    @import url("theme.css") layer(theme);
+  </style>
+</head>
+<body>
+  <h1 class="text-center">CSS @layer 示例</h1>
+  <div class="text-center mt-4">
+    <button class="btn btn-primary">点击我</button>
+  </div>
+  <script>
+    
+  </script>
+</body>
+</html>
