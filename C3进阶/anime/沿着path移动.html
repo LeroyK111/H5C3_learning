@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>offset-path 正确示例</title>
-  <style>
-    .container {
-      width: 200px;
-      height: 100px;
-      border: 1px dashed #ccc;
-      margin: 50px auto;
-      position: relative;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>offset-path 正确示例</title>
+    <style>
+      .container {
+        width: 200px;
+        height: 100px;
+        border: 1px dashed #ccc;
+        margin: 50px auto;
+        position: relative;
+      }
 
-    .move {
-      width: 20px;
-      height: 20px;
-      background: crimson;
-      border-radius: 50%;
-      offset-path: path("M10,80 Q95,10 180,80");
-      offset-position: 0%;
-      transition: offset-position 2s ease;
-      position: absolute;
+      .move {
+        width: 20px;
+        height: 20px;
+        background: crimson;
+        border-radius: 50%;
+        offset-path: path("M10,80 Q95,10 180,80");
+        offset-position: 0%;
+        transition: offset-position 2s ease;
+        position: absolute;
 
-      /* 这句非常关键：告诉浏览器要启用偏移动画 */
-      will-change: offset-position;
-    }
+        /* 这句非常关键：告诉浏览器要启用偏移动画 */
+        will-change: offset-position;
+      }
 
-    .move.move-end {
-      offset-position: 100%;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <div class="move" id="dot"></div>
-  </div>
-
-  <div style="text-align: center;">
-    <button onclick="move()">点击让小球移动</button>
-  </div>
-
-  <script>
-    function move() {
-      document.getElementById("dot").classList.toggle("move-end");
-    }
-  </script>
-
-</body>
+      .move.move-end {
+        offset-position: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="move" id="dot"></div>
+    </div>
+    <script>
+      function move() {
+        document.getElementById("dot").classList.toggle("move-end");
+      }
+    </script>
+    <div style="text-align: center">
+      <button onclick="move()">点击让小球移动</button>
+    </div>
+  </body>
 </html>
