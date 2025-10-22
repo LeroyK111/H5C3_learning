@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <section>
+Flex弹性布局（推荐首选）
+.parent {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+  </section>
+<section>
+
+Grid网格布局（同样推荐）
+.parent {
+display: grid;
+place-items: center;
+}
+
+</section>
+
+
+<section>
+
+绝对定位 + 位移变换（兼容性优秀）
+.parent {
+position: relative;
+}
+
+.child {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+</section>
+
+<section>
+方法4：绝对定位 + 自动边距（固定宽高适用）
+.parent {
+position: relative;
+}
+
+.child {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+width: 200px;
+height: 100px;
+}
+
+</section>
+
+
+<section>
+表格单元格方式（传统但有效）
+.parent {
+display: table-cell;
+width: 100vw;
+height: 100vh;
+vertical-align: middle;
+text-align: center;
+}
+
+.child {
+display: inline-block;
+}
+
+</section>
+
+<section>
+  内联块 + 伪元素（特殊场景使用）
+.parent {
+text-align: center;
+}
+
+.parent::before {
+content: '';
+display: inline-block;
+height: 100%;
+vertical-align: middle;
+}
+
+.child {
+display: inline-block;
+vertical-align: middle;
+}
+</section>
+
+
+<section>
+JavaScript动态计算（最后的选择）
+functioncenterElement(child, parent) {
+const parentWidth = parent.offsetWidth;
+const parentHeight = parent.offsetHeight;
+const childWidth = child.offsetWidth;
+const childHeight = child.offsetHeight;
+
+const top = (parentHeight - childHeight) / 2;
+const left = (parentWidth - childWidth) / 2;
+
+    child.style.position = 'absolute';
+    child.style.top = top + 'px';
+    child.style.left = left + 'px';
+}
+
+</section>
+
+<section>
+
+方法8：视口居中（弹窗场景）
+
+.modal {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 80%;
+max-width: 600px;
+}
+
+</section>
+</body>
+</html>
