@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Modern CSS attr() 演示</title>
+<style>
+  /* 演示容器 */
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; padding: 24px; background:#fafafa; }
+  h1 { margin-bottom: 12px; }
+
+  .grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  /* 1) 使用 attr() 为 width/height 提供长度（注意：属性值与 attr() 的类型/单位匹配）
+     data-width="350" + attr(data-width px) => width: 350px
+  */
+  .card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+    padding: 16px;
+    /* 直接用 attr() 设置宽度、高度（length 类型：px） */
+    width: attr(data-width px, 260px);
+    height: attr(data-height px, 140px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+
+  .card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
+
+  /* 2) 使用 attr() 设置颜色（color 类型）*/
+  .color-btn {
+    --bg: attr(data-bg color, #007bff); /* 可在自定义属性中赋值 */
+    background-color: var(--bg);
+    color: white;
+    padding: attr(data-pad px, 10px) attr(data-pad-2 px, 14px);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  /* 3) number 类型与 calc() */
+  .meter {
+    --ratio: attr(data-ratio number, 0.6); /* 取得 number 用于后续 calc */
+    width: 100%;
+    height: 18px;
+    background: #eee;
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+  }
+  .meter > i {
+    display: block;
+    height: 100%;
+    width: calc(var(--ratio) * 100%); /* 使用 attr() 赋值给自定义属性，再 calc */
+    background: linear-gradient(90deg,#4ecdc4,#1a9a7a);
+  }
+
+  /* 4) transform 中的角度（deg）与备用值 */
+  .spin-box {
+    width: 120px;
+    height: 120px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: linear-gradient(180deg,#fff,#f6f6f6);
+    transform: rotate( attr(data-rot deg, 0deg) );
+    transition: transform .4s cubic-bezier(.2,.9,.2,1);
+  }
+
+  /* 5) 如果 attribute 缺失或无效，attr() 使用 fallback */
+  .fallback-demo {
+    padding: 12px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px dashed #ddd;
+    width: attr(data-fwidth px, 220px);
+  }
+
+  /* 6) 仍可在 content 中使用传统字符串方式 */
+  .label::after {
+    content: " " attr(data-label, "（未命名）");
+    color: #666;
+    font-size: .9em;
+  }
+
+  /* 布局小样式 */
+  .meta { font-size: .9em; color:#666; margin-top:8px; text-align:center; }
+  .demo-row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; justify-content:center;}
+</style>
+</head>
+<body>
+  <h1>Modern CSS <code>attr()</code> 演示</h1>
+  <p class="meta">示例使用 <code>data-*</code> 属性作为数据源：长度、颜色、数字、角度、备用值、以及用于自定义属性。</p>
+
+  <section class="grid" aria-label="attr demo grid">
+    <!-- 长度示例 -->
+    <div class="card" data-width="350" data-height="160">
+      <strong>宽 350px / 高 160px</strong>
+      <div class="meta">data-width="350" / data-height="160" —— width/height 使用 <code>attr(... px)</code></div>
+    </div>
+
+    <div class="card" data-width="220" data-height="120">
+      <strong>宽 220px / 高 120px</strong>
+      <div class="meta">同上，展示不同值</div>
+    </div>
+
+    <!-- 颜色 + padding -->
+    <div class="card" data-width="300" data-height="130">
+      <div class="demo-row">
+        <button class="color-btn" data-bg="#ff6b6b" data-pad="12" data-pad-2="18">红色按钮</button>
+        <button class="color-btn" data-bg="#4ecdc4" data-pad="10" data-pad-2="16">青绿色按钮</button>
+        <button class="color-btn" data-bg="#ffa94d" data-pad="8" data-pad-2="14">橙色按钮</button>
+      </div>
+      <div class="meta">颜色与 padding 都来自 data- 属性（兼容 fallback）</div>
+    </div>
+
+    <!-- number + calc（进度条） -->
+    <div class="card" data-width="320" data-height="150">
+      <strong>进度条（data-ratio）</strong>
+      <div class="meta">data-ratio 可为 0 ~ 1 之间的小数</div>
+      <div style="width:100%;margin-top:12px;">
+        <div class="meter" data-ratio="0.78" aria-hidden="true"><i></i></div>
+        <div style="text-align:right;font-size:.9em;color:#666;margin-top:6px">78%</div>
+      </div>
+    </div>
+
+    <!-- transform: rotate -->
+    <div class="card" data-width="260" data-height="160" style="align-items:center;">
+      <div class="spin-box" data-rot="25">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="#1a9a7a" stroke-width="2" />
+          <path d="M12 6v6l4 2" stroke="#1a9a7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="meta">元素按 <code>data-rot</code> 指定的度数旋转（deg）</div>
+    </div>
+
+    <!-- fallback / invalid 示例 -->
+    <div class="card" data-width="240" data-height="140">
+      <strong class="label" data-label="可选标签">Fallback 演示</strong>
+      <div class="fallback-demo" title="没有 data-fwidth，则使用 fallback">
+        container width 使用 <code>attr(data-fwidth px, 220px)</code> —— 演示 fallback
+      </div>
+    </div>
+
+    <!-- content 传统用法 -->
+    <div class="card" data-width="280" data-height="120">
+      <span class="label" data-label="标题文本">这是标题</span>
+      <div class="meta">::after 显示 data-label（传统 content 用法仍可用）</div>
+    </div>
+  </section>
+
+  <hr style="margin:28px 0">
+
+  <section>
+    <h2>说明与兼容性</h2>
+    <ul>
+      <li>现代化的 <code>attr()</code> 语法允许指定解析类型（如 <code>px</code>/<code>deg</code>/<code>number</code>/<code>color</code> 等），并可在绝大多数 CSS 属性（甚至自定义属性）中使用。相关规范与文档请参见 MDN 与 W3C 说明。:contentReference[oaicite:1]{index=1}</li>
+      <li>实现上：Chromium 系列在近期版本已开始支持这些扩展（例如 Chrome 133+ 的博客说明），但各浏览器的支持进度不同，生产环境中请先查验目标浏览器版本并准备回退策略（fallback 或 CSS 变量、inline style/JS）。:contentReference[oaicite:2]{index=2}</li>
+      <li>最佳实践：把 <code>attr()</code> 作为设计系统的小型 API（用 <code>data-*</code> 传参），但仍对缺失 / 非法值使用 fallback，同时在不支持的浏览器上提供样式降级。更多示例可参考社区教程与文章。:contentReference[oaicite:3]{index=3}</li>
+    </ul>
+  </section>
+</body>
+</html>
