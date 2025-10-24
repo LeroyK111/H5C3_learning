@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      input[type="text"] {
+        border: 2px solid blue;
+        padding: 5px;
+      }
+
+      /*
+      设置宽高比
+      */
+      .card  {
+          aspect-ratio:  16 / 9;
+      }
+    </style>
+
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <style>
+      /*
+      处理原生吸附
+      */
+      .container  {
+          scroll-snap-type: x mandatory;
+          overflow-x: scroll;
+      }
+      .child  {
+          scroll-snap-align: center;
+      }
+    </style>
+
+    <style>
+      /*
+      它把屏外内容的渲染延后到用户接近时，因此首屏更快、滚动更顺。何时使用：信息流、长列表、无限滚动。尽管如此，请留意内容突然显现的过渡体验。
+      */
+      .article-preview  {
+          content-visibility: auto;
+      }
+    </style>
+
+    <style>
+      /*
+      选择多个元素时，避免重复书写选择器
+      */
+      :where(h1,  h2,  h3) {
+          color:   #1f1f1f;
+      }
+    </style>
+
+    <style>
+      /*
+      网格继承
+      */
+      .grid-container  {
+          display: grid;
+          grid-template-columns:  1fr 2fr;
+      }
+      .grid-item  {
+          display: subgrid;
+          grid-column: span 2;
+      }
+    </style>
+  </body>
+</html>
