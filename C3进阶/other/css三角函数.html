@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    sin(角度) /* 正弦函数 */ cos(角度) /* 余弦函数 */ tan(角度) /* 正切函数 */
+    <style>
+      .box {
+        --angle: 30deg;
+        --base: 10vw;
+        width: var(--base);
+        height: calc(tan(var(--angle)) * var(--base));
+        background: lightblue;
+      }
+    </style>
+
+    <div class="box"></div>
+  </body>
+</html>
